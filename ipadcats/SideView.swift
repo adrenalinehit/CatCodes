@@ -28,7 +28,7 @@ struct SidebarView: View {
 }
 
 struct RandomCode: View {
-    @State var code: HTTPStatusCode = HTTPStatusCode.notFound
+    @State private var code: HTTPStatusCode = HTTPStatusCode.notFound
     
     var body: some View {
         IndividualCode(statusCode: code.rawValue)
@@ -44,10 +44,10 @@ struct AllHttpCodes: View {
     
     var body: some View {
         List {
-            ForEach(codes, id: \.self) { code in
+            ForEach(codes) { code in
                 NavigationLink(destination: IndividualCode(statusCode:code.rawValue)) {
                     Text("HTTP Status Code: \(code.rawValue)")
-                        .font(.largeTitle)
+                        .font(.title3)
                         .padding()
                 }
             }

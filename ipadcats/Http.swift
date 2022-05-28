@@ -10,7 +10,9 @@ import Foundation
 /// This is a list of Hypertext Transfer Protocol (HTTP) response status codes.
 /// It includes codes from IETF internet standards, other IETF RFCs, other specifications, and some additional commonly used codes.
 /// The first digit of the status code specifies one of five classes of response; an HTTP client must recognise these five classes at a minimum.
-enum HTTPStatusCode: Int, CaseIterable, Error {
+enum HTTPStatusCode: Int, CaseIterable, Identifiable {
+    
+    var id: Self { self }
     
     //
     // Informational - 1xx
@@ -238,7 +240,5 @@ extension HTTPURLResponse {
     var status: HTTPStatusCode? {
         return HTTPStatusCode(rawValue: statusCode)
     }
-    
-    
     
 }
