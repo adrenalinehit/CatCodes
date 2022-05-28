@@ -20,15 +20,14 @@ struct SidebarView: View {
                 }
                 
                 NavigationLink(destination: RandomCode()) {
-                    Label("Random Status Code", systemImage: "list.bullet.rectangle")
+                    Label("Random Status Code", systemImage: "shuffle")
                 }
                 
-                Group {
-                    Picker(selection: $appPrefs.animalPreference, label: Text("Animal Type:")) {
-                        Text("Cats").tag(AnimalType.cat)
-                        Text("Dogs").tag(AnimalType.dog)
-                    }
+                Picker(selection: $appPrefs.animalPreference, label:Text("Animal Type:")) {
+                    Text("Cats").tag(AnimalType.cat)
+                    Text("Dogs").tag(AnimalType.dog)
                 }
+                
             }
             
             .listStyle(SidebarListStyle())
