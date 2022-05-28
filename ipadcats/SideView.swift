@@ -14,7 +14,7 @@ struct SidebarView: View {
     var body: some View {
         NavigationView {
             List {
-                    
+                
                 NavigationLink(destination: AllHttpCodes()) {
                     Label("All HTTP Status Codes", systemImage: "list.bullet.rectangle")
                 }
@@ -41,10 +41,21 @@ struct RandomCode: View {
     @State private var code: HTTPStatusCode = HTTPStatusCode.notFound
     
     var body: some View {
-        IndividualCode(statusCode: code.rawValue)
-            .onAppear {
-                code = HTTPStatusCode.allCases.randomElement()!
+        
+        VStack(alignment: .trailing) {
+            IndividualCode(statusCode: code.rawValue)
+                .onAppear {
+                    code = HTTPStatusCode.allCases.randomElement()!
+                }
+            HStack(alignment: .bottom) {
+                Button("Another...", action: newRandom).padding(.trailing).buttonStyle(.bordered)
             }
+            
+        }
+    }
+    
+    func newRandom() {
+        code = HTTPStatusCode.allCases.randomElement()!
     }
 }
 

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //dog or cat?
     @StateObject var appPrefs = AppPreferences()
     
     var body: some View {
