@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CatImage: View {
+struct Image: View {
     
     var imageURL: String
     
@@ -22,8 +22,8 @@ struct CatImage: View {
     }
 }
 
-struct CatImage_Previews: PreviewProvider {
+struct Image_Previews: PreviewProvider {
     static var previews: some View {
-        CatImage(imageURL: "https://dummyimage.com/200x200/000/fff")
+        Image(imageURL: "https://dummyimage.com/200x200/000/fff")
     }
 }

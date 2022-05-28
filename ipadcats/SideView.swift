@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct SidebarView: View {
+    
+    @EnvironmentObject var appPrefs: AppPreferences
+    
     var body: some View {
         NavigationView {
             List {
-                
+                    
                 NavigationLink(destination: AllHttpCodes()) {
                     Label("All HTTP Status Codes", systemImage: "list.bullet.rectangle")
                 }
@@ -20,7 +23,14 @@ struct SidebarView: View {
                     Label("Random Status Code", systemImage: "list.bullet.rectangle")
                 }
                 
+                Group {
+                    Picker(selection: $appPrefs.animalPreference, label: Text("Animal Type:")) {
+                        Text("Cats").tag(AnimalType.cat)
+                        Text("Dogs").tag(AnimalType.dog)
+                    }
+                }
             }
+            
             .listStyle(SidebarListStyle())
             .navigationTitle("Statuses")
         }
@@ -57,11 +67,19 @@ struct AllHttpCodes: View {
 
 struct IndividualCode: View {
     
+    @EnvironmentObject var appPrefs: AppPreferences
+    
     var statusCode = 404
     
     var body: some View {
         VStack {
-            CatImage(imageURL: "https://http.cat/\(statusCode).jpg")
+            switch appPrefs.animalPreference {
+            case .cat:
+                Image(imageURL: "https://http.cat/\(statusCode).jpg")
+            case .dog:
+                Image(imageURL: "https://http.dog/\(statusCode).jpg")
+            }
+            
         }
     }
 }
