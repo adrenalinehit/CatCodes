@@ -16,6 +16,7 @@ struct Meme: View {
     
     var body: some View {
         VStack {
+            
             switch animalType {
             case .cat:
                 Image(imageURL: "https://http.cat/\(statusCode).jpg")
@@ -23,23 +24,20 @@ struct Meme: View {
                 Image(imageURL: "https://http.dog/\(statusCode).jpg")
             }
             
-        }
-        
-        HStack {
-            
-            Button {
-                shareSheet()
-            } label: {
-                Label("Share", systemImage: "square.and.arrow.up")
-            }.buttonStyle(PlainButtonStyle())
-            
-            Spacer()
-            
-            Button {
-                favouriteItem()
-            } label: {
-                appPrefs.isFavourite(animal: animalType, code: statusCode) ? Label("Favourite", systemImage: "star.fill") : Label("Favourite", systemImage: "star")
-            }.buttonStyle(PlainButtonStyle())
+            HStack {
+                
+                Button {
+                    shareSheet()
+                } label: {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
+                
+                Button {
+                    favouriteItem()
+                } label: {
+                    appPrefs.isFavourite(animal: animalType, code: statusCode) ? Label("Favourite", systemImage: "star.fill") : Label("Favourite", systemImage: "star")
+                }
+            }
         }
     }
     

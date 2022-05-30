@@ -13,16 +13,28 @@ struct MyFavourites: View {
     
     var body: some View {
         
-        List {
-            ForEach(appPrefs.codeFavourites.sorted(by: >), id: \.self) { fav in
-                Meme(statusCode: fav.code, animalType: fav.animal)
+        if appPrefs.codeFavourites.isEmpty {
+            VStack {
+                Text("Oops, you've not chosen any favourites yet...")
+                    .multilineTextAlignment(.center)
+                    .padding(.all)
+            }
+        } else {
+            GeometryReader { geometry in
+                VStack(alignment: .center) {
+                    Spacer()
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(appPrefs.codeFavourites.sorted(by: >), id: \.self) { fav in
+                                Meme(statusCode: fav.code, animalType: fav.animal).frame(width: geometry.size.width)
+                            }
+                            
+                        }
+                    }
+                    Spacer()
+                }
             }
         }
-        .overlay(Group {
-            if appPrefs.codeFavourites.isEmpty {
-                Text("Oops, you've not chosen any favourites yet...")
-            }
-        })
     }
 }
 
