@@ -137,11 +137,11 @@ struct IndividualCode: View {
             favouriteItem()
         } label: {
             appPrefs.isFavourite(animal: animalType, code: statusCode) ? Label("Favourite", systemImage: "star.fill") : Label("Favourite", systemImage: "star")
-        }
+        }.buttonStyle(PlainButtonStyle())
         
     }
     
-    func favouriteItem(){
+    func favouriteItem() {
         appPrefs.favourite(animal: animalType, code: statusCode)
     }
 }

@@ -47,10 +47,11 @@ enum AnimalType: String, CaseIterable, Identifiable {
 extension AppPreferences {
     func isFavourite(animal: AnimalType, code: Int) -> Bool {
         let favourite = Favourite(code: code, animal: animal)
+        
         return codeFavourites.contains(favourite)
     }
     
-    func favourite(animal: AnimalType, code: Int){
+    func favourite(animal: AnimalType, code: Int) {
         let favouriteItem = Favourite(code: code, animal: animal)
         
         if codeFavourites.contains(favouriteItem){
