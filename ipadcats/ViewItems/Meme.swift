@@ -1,0 +1,71 @@
+//
+//  Meme.swift
+//  ipadcats
+//
+//  Created by Nick Payne on 30/05/2022.
+//
+
+import SwiftUI
+
+struct Meme: View {
+    
+    @EnvironmentObject var appPrefs: AppPreferences
+    
+    var statusCode = 404
+    var animalType = AnimalType.cat
+    
+    var body: some View {
+        VStack {
+            switch animalType {
+            case .cat:
+                Image(imageURL: "https://http.cat/\(statusCode).jpg")
+            case .dog:
+                Image(imageURL: "https://http.dog/\(statusCode).jpg")
+            }
+            
+        }
+        
+        HStack {
+            
+            Button {
+                shareSheet()
+            } label: {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }.buttonStyle(PlainButtonStyle())
+            
+            Spacer()
+            
+            Button {
+                favouriteItem()
+            } label: {
+                appPrefs.isFavourite(animal: animalType, code: statusCode) ? Label("Favourite", systemImage: "star.fill") : Label("Favourite", systemImage: "star")
+            }.buttonStyle(PlainButtonStyle())
+        }
+    }
+    
+    func favouriteItem() {
+        appPrefs.favourite(animal: animalType, code: statusCode)
+    }
+    
+    //todo: ugly, needs refactoring
+    func shareSheet() {
+        let shareText = "I've just laughed at this Http Status code meme! Check it out!"
+        
+        switch animalType {
+        case .cat:
+            guard let urlShare = URL(string: "https://http.cat/\(statusCode).jpg") else { return }
+            let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        case .dog:
+            guard let urlShare = URL(string: "https://http.dog/\(statusCode).jpg") else { return }
+            let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        }
+    }
+}
+
+struct Meme_Previews: PreviewProvider {
+    static var previews: some View {
+        Meme()
+    }
+}
