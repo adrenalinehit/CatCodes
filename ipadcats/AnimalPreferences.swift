@@ -10,9 +10,22 @@ import Foundation
 class AppPreferences: ObservableObject {
     @Published var animalPreference = AnimalType.cat
     @Published var codeFavourites: Set<Favourite> = []
+    
+    init() {
+        if let data = UserDefaults.standard.data(forKey: "Favourites") {
+            if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
+                codeFavourites = decoded
+                return
+            }
+        }
+
+        codeFavourites = []
+    }
 }
 
-class Favourite: Hashable, Comparable {
+
+
+class Favourite: Codable, Hashable, Comparable {
     
     var code: Int
     var animal: AnimalType
@@ -36,7 +49,7 @@ class Favourite: Hashable, Comparable {
     }
 }
 
-enum AnimalType: String, CaseIterable, Identifiable {
+enum AnimalType: String, CaseIterable, Identifiable, Codable {
     
     var id: Self { self }
     
@@ -56,10 +69,18 @@ extension AppPreferences {
         
         if codeFavourites.contains(favouriteItem){
             codeFavourites.remove(favouriteItem)
+            save(favs: codeFavourites)
         } else {
             codeFavourites.insert(favouriteItem)
+            save(favs: codeFavourites)
         }
         
+    }
+    
+    func save(favs: Set<Favourite>) {
+        if let encoded = try? JSONEncoder().encode(favs) {
+            UserDefaults.standard.set(encoded, forKey: "Favourites")
+        }
     }
     
 }
