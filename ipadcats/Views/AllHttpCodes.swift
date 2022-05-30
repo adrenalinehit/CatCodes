@@ -15,13 +15,21 @@ struct AllHttpCodes: View {
     
     var body: some View {
         List {
-            ForEach(codes) { code in
-                NavigationLink(destination: Meme(statusCode:code.rawValue, animalType: appPrefs.animalPreference)) {
-                    Text("HTTP Status Code: \(code.rawValue)")
-                        .font(.title3)
-                        .padding()
+            
+            ForEach(HTTPStatusCode.ResponseType.allCases) { rType in
+                Text(rType.rawValue).font(.title2)
+                
+                ForEach(codes.filter{$0.responseType == rType}) { code in
+                    NavigationLink(destination: Meme(statusCode:code.rawValue, animalType: appPrefs.animalPreference)) {
+                        Text("HTTP Status Code: \(code.rawValue)")
+                            .font(.body)
+                            .padding()
+                    }
                 }
+                
             }
+            
+            
         }
     }
 }
