@@ -37,6 +37,7 @@ struct SidebarView: View {
             .listStyle(SidebarListStyle())
             .navigationTitle("Statuses")
             
+            MyFavourites()
             //RandomCode()
         }
         
@@ -48,11 +49,17 @@ struct MyFavourites: View {
     @EnvironmentObject var appPrefs: AppPreferences
     
     var body: some View {
+        
         List {
             ForEach(appPrefs.codeFavourites.sorted(by: >), id: \.self) { fav in
                 IndividualCode(statusCode: fav.code, animalType: fav.animal)
             }
         }
+        .overlay(Group {
+            if appPrefs.codeFavourites.isEmpty {
+                Text("Oops, you've not chosen any favourites yet...")
+            }
+        })
     }
     
 }
