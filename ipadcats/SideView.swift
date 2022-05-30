@@ -32,7 +32,9 @@ struct SidebarView: View {
             
             .listStyle(SidebarListStyle())
             .navigationTitle("Statuses")
+            RandomCode()
         }
+        
     }
 }
 
@@ -41,16 +43,22 @@ struct RandomCode: View {
     
     var body: some View {
         
-        VStack(alignment: .trailing) {
-            IndividualCode(statusCode: code.rawValue)
-                .onAppear {
-                    code = HTTPStatusCode.allCases.randomElement()!
-                }
-            HStack(alignment: .bottom) {
-                Button("Another...", action: newRandom).padding(.trailing).buttonStyle(.bordered)
+        IndividualCode(statusCode: code.rawValue)
+            .onAppear {
+                code = HTTPStatusCode.allCases.randomElement()!
             }
-            
-        }
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Spacer()
+                    Button {
+                        newRandom()
+                    } label: {
+                        Label("Another...", systemImage: "chevron.right.2")
+                    }
+                    
+                }
+            }
+        
     }
     
     func newRandom() {
@@ -91,6 +99,20 @@ struct IndividualCode: View {
             }
             
         }
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Spacer()
+                Button {
+                    favouriteItem()
+                } label: {
+                    Label("Favourite", systemImage: "star")
+                }
+            }
+        }
+    }
+    
+    func favouriteItem(){
+        print("favoriting...")
     }
 }
 
