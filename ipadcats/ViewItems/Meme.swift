@@ -45,6 +45,8 @@ struct Meme: View {
     
     func favouriteItem() {
         appPrefs.favourite(animal: animalType, code: statusCode)
+        let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+        impactMed.impactOccurred()
     }
     
     //todo: ugly, needs refactoring
