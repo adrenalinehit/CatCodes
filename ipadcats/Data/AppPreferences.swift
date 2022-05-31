@@ -12,7 +12,7 @@ class AppPreferences: ObservableObject {
     @Published var codeFavourites: Set<Favourite> = []
     
     init() {
-        if let data = UserDefaults.standard.data(forKey: "Favourites") {
+        if let data = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
             if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
                 codeFavourites = decoded
                 return
@@ -45,7 +45,7 @@ extension AppPreferences {
     
     func save(favs: Set<Favourite>) {
         if let encoded = try? JSONEncoder().encode(favs) {
-            UserDefaults.standard.set(encoded, forKey: "Favourites")
+            UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.set(encoded, forKey: "Favourites")
         }
     }
     

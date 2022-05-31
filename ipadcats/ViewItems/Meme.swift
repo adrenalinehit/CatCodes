@@ -21,9 +21,9 @@ struct Meme: View {
             
             switch animalType {
             case .cat:
-                Image(imageURL: "https://http.cat/\(statusCode).jpg")
+                MyImage(imageURL: "https://http.cat/\(statusCode).jpg")
             case .dog:
-                Image(imageURL: "https://http.dog/\(statusCode).jpg")
+                MyImage(imageURL: "https://http.dog/\(statusCode).jpg")
             }
             
             HStack {
