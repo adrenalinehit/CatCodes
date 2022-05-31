@@ -11,6 +11,8 @@ struct AllHttpCodes: View {
     
     @EnvironmentObject var appPrefs: AppPreferences
     
+    @State private var searchText = ""
+    
     var codes: [HTTPStatusCode] = HTTPStatusCode.allCases
     
     var body: some View {
@@ -19,7 +21,7 @@ struct AllHttpCodes: View {
             ForEach(HTTPStatusCode.ResponseType.allCases) { rType in
                 Text(rType.rawValue).font(.title2)
                 
-                ForEach(codes.filter{$0.responseType == rType}) { code in
+                ForEach(searchResults.filter{$0.responseType == rType}) { code in
                     NavigationLink(destination: Meme(statusCode:code.rawValue, animalType: appPrefs.animalPreference)) {
                         Text("HTTP Status Code: \(code.rawValue)")
                             .font(.body)
@@ -28,8 +30,17 @@ struct AllHttpCodes: View {
                 }
                 
             }
-            
-            
+        }
+        .searchable(text: $searchText)
+    }
+    
+    var searchResults: [HTTPStatusCode] {
+        let all: [HTTPStatusCode] = HTTPStatusCode.allCases
+        
+        if searchText.isEmpty {
+            return all
+        } else {
+            return all.filter { $0.rawValue == Int(searchText) }
         }
     }
 }

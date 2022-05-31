@@ -11,6 +11,8 @@ struct Meme: View {
     
     @EnvironmentObject var appPrefs: AppPreferences
     
+    @GestureState var press = false
+    
     var statusCode = 404
     var animalType = AnimalType.cat
     
@@ -60,6 +62,7 @@ struct Meme: View {
             UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
         }
     }
+    
 }
 
 struct Meme_Previews: PreviewProvider {
