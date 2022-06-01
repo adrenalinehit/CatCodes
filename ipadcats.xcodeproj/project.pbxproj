@@ -12,7 +12,6 @@
 		D33A65202847F50700A307FA /* ipadcats_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; };
 		D33A65212847F50700A307FA /* ipadcats_data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D33A65252847F51000A307FA /* ipadcats_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; };
-		D33A65262847F51000A307FA /* ipadcats_data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D33A652E2847F5F400A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
 		D33A652F2847F5F500A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
 		D39302D4283FDFD700BBD5F4 /* ipadcatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302D3283FDFD700BBD5F4 /* ipadcatsApp.swift */; };
@@ -75,17 +74,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D33A65212847F50700A307FA /* ipadcats_data.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D33A65292847F51000A307FA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D33A65262847F51000A307FA /* ipadcats_data.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +316,6 @@
 				D3F2612128469FAD006169A8 /* Sources */,
 				D3F2612228469FAD006169A8 /* Frameworks */,
 				D3F2612328469FAD006169A8 /* Resources */,
-				D33A65292847F51000A307FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -475,6 +462,7 @@
 		D33A65142847F1A700A307FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -505,6 +493,7 @@
 		D33A65152847F1A700A307FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
