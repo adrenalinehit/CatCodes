@@ -1,0 +1,64 @@
+//
+//  FavoriteImageProvider.swift
+//  widgetsExtension
+//
+//  Created by Nick Payne on 01/06/2022.
+//
+
+import Foundation
+import UIKit
+import ipadcats_data
+
+enum FavouriteResponse {
+    case Success(image:UIImage)
+    case Failure
+}
+
+class FavouriteImageProvider {
+    
+    static func randomFavouriteImage(completion: ((FavouriteResponse) -> Void)?) {
+        
+        var codeFavourites: Set<Favourite> = []
+        
+        if let data = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
+            if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
+                codeFavourites = decoded
+            }
+        }
+        
+        var urlString = ""
+        let fav = codeFavourites.randomElement()
+        
+        switch fav?.animal {
+        case .cat:
+            urlString="https://http.cat/\(fav?.code ?? 404).jpg"
+        case .dog:
+            urlString="https://http.dog/\(fav?.code ?? 404).jpg"
+        case .none:
+            urlString="https://http.cat/404.jpg"
+        }
+        
+        let url = URL(string: urlString)!
+        let urlRequest = URLRequest(url: url)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
+            parseImageFromResponse(data: data, urlResponse: urlResponse, error: error, completion: completion)
+        }
+        
+        task.resume()
+    }
+    
+    static func parseImageFromResponse(data: Data?, urlResponse: URLResponse?, error: Error?, completion: ((FavouriteResponse) -> Void)?){
+        
+        guard error == nil, let content = data else {
+            print("error getting image data")
+            let response = FavouriteResponse.Failure
+            completion?(response)
+            return
+        }
+        
+        let image = UIImage(data: content)!
+        let response = FavouriteResponse.Success(image: image)
+        completion?(response)
+    }
+}

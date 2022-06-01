@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ipadcats_data
 
 class AppPreferences: ObservableObject {
     @Published var animalPreference = AnimalType.cat

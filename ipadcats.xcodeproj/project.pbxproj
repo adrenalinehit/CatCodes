@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33A650E2847F1A700A307FA /* ipadcats_data.h in Headers */ = {isa = PBXBuildFile; fileRef = D33A650D2847F1A700A307FA /* ipadcats_data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D33A65172847F1B700A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
+		D33A65202847F50700A307FA /* ipadcats_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; };
+		D33A65212847F50700A307FA /* ipadcats_data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D33A65252847F51000A307FA /* ipadcats_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; };
+		D33A65262847F51000A307FA /* ipadcats_data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D33A652E2847F5F400A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
+		D33A652F2847F5F500A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
 		D39302D4283FDFD700BBD5F4 /* ipadcatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302D3283FDFD700BBD5F4 /* ipadcatsApp.swift */; };
 		D39302D6283FDFD700BBD5F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302D5283FDFD700BBD5F4 /* ContentView.swift */; };
 		D39302D8283FDFDA00BBD5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39302D7283FDFDA00BBD5F4 /* Assets.xcassets */; };
@@ -19,16 +27,37 @@
 		D3B623F2284543580084930E /* MyFavourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F1284543580084930E /* MyFavourites.swift */; };
 		D3B623F42845461D0084930E /* RandomCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F32845461D0084930E /* RandomCode.swift */; };
 		D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F5284546370084930E /* AllHttpCodes.swift */; };
-		D3B623F92845468F0084930E /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
 		D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD0A022842A315005A957F /* AppPreferences.swift */; };
 		D3F2612828469FAD006169A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F2612728469FAD006169A8 /* WidgetKit.framework */; };
 		D3F2612A28469FAD006169A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F2612928469FAD006169A8 /* SwiftUI.framework */; };
 		D3F2612D28469FAD006169A8 /* widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2612C28469FAD006169A8 /* widgets.swift */; };
 		D3F2612F28469FAF006169A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F2612E28469FAF006169A8 /* Assets.xcassets */; };
 		D3F2613328469FAF006169A8 /* widgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3F2612528469FAD006169A8 /* widgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3F2613B2847BB86006169A8 /* FavouriteImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2613A2847BB86006169A8 /* FavouriteImageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D33A651E2847F42100A307FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39302C8283FDFD700BBD5F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D33A650A2847F1A700A307FA;
+			remoteInfo = ipadcats.data;
+		};
+		D33A65222847F50700A307FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39302C8283FDFD700BBD5F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D33A650A2847F1A700A307FA;
+			remoteInfo = ipadcats.data;
+		};
+		D33A65272847F51000A307FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39302C8283FDFD700BBD5F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D33A650A2847F1A700A307FA;
+			remoteInfo = ipadcats.data;
+		};
 		D3F2613128469FAF006169A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D39302C8283FDFD700BBD5F4 /* Project object */;
@@ -39,6 +68,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D33A65242847F50700A307FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D33A65212847F50700A307FA /* ipadcats_data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33A65292847F51000A307FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D33A65262847F51000A307FA /* ipadcats_data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F2613428469FAF006169A8 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,6 +104,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D33A650B2847F1A700A307FA /* ipadcats_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ipadcats_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33A650D2847F1A700A307FA /* ipadcats_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipadcats_data.h; sourceTree = "<group>"; };
 		D39302D0283FDFD700BBD5F4 /* ipadcats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipadcats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39302D3283FDFD700BBD5F4 /* ipadcatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipadcatsApp.swift; sourceTree = "<group>"; };
 		D39302D5283FDFD700BBD5F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,13 +130,22 @@
 		D3F2613028469FAF006169A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3F261382846A608006169A8 /* ipadcats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ipadcats.entitlements; sourceTree = "<group>"; };
 		D3F261392846A647006169A8 /* widgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetsExtension.entitlements; sourceTree = "<group>"; };
+		D3F2613A2847BB86006169A8 /* FavouriteImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteImageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D33A65082847F1A700A307FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D39302CD283FDFD700BBD5F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33A65202847F50700A307FA /* ipadcats_data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33A65252847F51000A307FA /* ipadcats_data.framework in Frameworks */,
 				D3F2612A28469FAD006169A8 /* SwiftUI.framework in Frameworks */,
 				D3F2612828469FAD006169A8 /* WidgetKit.framework in Frameworks */,
 			);
@@ -99,12 +162,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D33A650C2847F1A700A307FA /* ipadcats.data */ = {
+			isa = PBXGroup;
+			children = (
+				D3B623F82845468F0084930E /* Favourite.swift */,
+				D33A650D2847F1A700A307FA /* ipadcats_data.h */,
+			);
+			path = ipadcats.data;
+			sourceTree = "<group>";
+		};
 		D39302C7283FDFD700BBD5F4 = {
 			isa = PBXGroup;
 			children = (
 				D3F261392846A647006169A8 /* widgetsExtension.entitlements */,
 				D39302D2283FDFD700BBD5F4 /* ipadcats */,
 				D3F2612B28469FAD006169A8 /* widgets */,
+				D33A650C2847F1A700A307FA /* ipadcats.data */,
 				D3F2612628469FAD006169A8 /* Frameworks */,
 				D39302D1283FDFD700BBD5F4 /* Products */,
 			);
@@ -115,6 +188,7 @@
 			children = (
 				D39302D0283FDFD700BBD5F4 /* ipadcats.app */,
 				D3F2612528469FAD006169A8 /* widgetsExtension.appex */,
+				D33A650B2847F1A700A307FA /* ipadcats_data.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,7 +243,6 @@
 			children = (
 				D3BD0A022842A315005A957F /* AppPreferences.swift */,
 				D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */,
-				D3B623F82845468F0084930E /* Favourite.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -189,13 +262,43 @@
 				D3F2612C28469FAD006169A8 /* widgets.swift */,
 				D3F2612E28469FAF006169A8 /* Assets.xcassets */,
 				D3F2613028469FAF006169A8 /* Info.plist */,
+				D3F2613A2847BB86006169A8 /* FavouriteImageProvider.swift */,
 			);
 			path = widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D33A65062847F1A700A307FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33A650E2847F1A700A307FA /* ipadcats_data.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		D33A650A2847F1A700A307FA /* ipadcats.data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33A65132847F1A700A307FA /* Build configuration list for PBXNativeTarget "ipadcats.data" */;
+			buildPhases = (
+				D33A65062847F1A700A307FA /* Headers */,
+				D33A65072847F1A700A307FA /* Sources */,
+				D33A65082847F1A700A307FA /* Frameworks */,
+				D33A65092847F1A700A307FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ipadcats.data;
+			productName = ipadcats.data;
+			productReference = D33A650B2847F1A700A307FA /* ipadcats_data.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D39302CF283FDFD700BBD5F4 /* ipadcats */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D39302DE283FDFDA00BBD5F4 /* Build configuration list for PBXNativeTarget "ipadcats" */;
@@ -204,11 +307,14 @@
 				D39302CD283FDFD700BBD5F4 /* Frameworks */,
 				D39302CE283FDFD700BBD5F4 /* Resources */,
 				D3F2613428469FAF006169A8 /* Embed App Extensions */,
+				D33A65242847F50700A307FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D3F2613228469FAF006169A8 /* PBXTargetDependency */,
+				D33A651F2847F42100A307FA /* PBXTargetDependency */,
+				D33A65232847F50700A307FA /* PBXTargetDependency */,
 			);
 			name = ipadcats;
 			productName = ipadcats;
@@ -222,10 +328,12 @@
 				D3F2612128469FAD006169A8 /* Sources */,
 				D3F2612228469FAD006169A8 /* Frameworks */,
 				D3F2612328469FAD006169A8 /* Resources */,
+				D33A65292847F51000A307FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D33A65282847F51000A307FA /* PBXTargetDependency */,
 			);
 			name = widgetsExtension;
 			productName = widgetsExtension;
@@ -242,6 +350,9 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					D33A650A2847F1A700A307FA = {
+						CreatedOnToolsVersion = 13.4;
+					};
 					D39302CF283FDFD700BBD5F4 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -265,11 +376,19 @@
 			targets = (
 				D39302CF283FDFD700BBD5F4 /* ipadcats */,
 				D3F2612428469FAD006169A8 /* widgetsExtension */,
+				D33A650A2847F1A700A307FA /* ipadcats.data */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D33A65092847F1A700A307FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D39302CE283FDFD700BBD5F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +410,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D33A65072847F1A700A307FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33A65172847F1B700A307FA /* Favourite.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D39302CC283FDFD700BBD5F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,7 +428,7 @@
 				D3B623F02845429A0084930E /* Meme.swift in Sources */,
 				D3B623F2284543580084930E /* MyFavourites.swift in Sources */,
 				D39302E2283FDFF900BBD5F4 /* MyImage.swift in Sources */,
-				D3B623F92845468F0084930E /* Favourite.swift in Sources */,
+				D33A652F2847F5F500A307FA /* Favourite.swift in Sources */,
 				D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */,
 				D39302D4283FDFD700BBD5F4 /* ipadcatsApp.swift in Sources */,
 				D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */,
@@ -313,6 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33A652E2847F5F400A307FA /* Favourite.swift in Sources */,
+				D3F2613B2847BB86006169A8 /* FavouriteImageProvider.swift in Sources */,
 				D3F2612D28469FAD006169A8 /* widgets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +449,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D33A651F2847F42100A307FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D33A650A2847F1A700A307FA /* ipadcats.data */;
+			targetProxy = D33A651E2847F42100A307FA /* PBXContainerItemProxy */;
+		};
+		D33A65232847F50700A307FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D33A650A2847F1A700A307FA /* ipadcats.data */;
+			targetProxy = D33A65222847F50700A307FA /* PBXContainerItemProxy */;
+		};
+		D33A65282847F51000A307FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D33A650A2847F1A700A307FA /* ipadcats.data */;
+			targetProxy = D33A65272847F51000A307FA /* PBXContainerItemProxy */;
+		};
 		D3F2613228469FAF006169A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D3F2612428469FAD006169A8 /* widgetsExtension */;
@@ -328,6 +472,66 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D33A65142847F1A700A307FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W24S2RJT7L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.enyapkcin.ipadcats-data";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D33A65152847F1A700A307FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W24S2RJT7L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.enyapkcin.ipadcats-data";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D39302DC283FDFDA00BBD5F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -565,6 +769,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D33A65132847F1A700A307FA /* Build configuration list for PBXNativeTarget "ipadcats.data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33A65142847F1A700A307FA /* Debug */,
+				D33A65152847F1A700A307FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D39302CB283FDFD700BBD5F4 /* Build configuration list for PBXProject "ipadcats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
