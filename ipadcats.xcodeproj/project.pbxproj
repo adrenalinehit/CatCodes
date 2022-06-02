@@ -12,8 +12,8 @@
 		D33A65202847F50700A307FA /* ipadcats_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; };
 		D33A65212847F50700A307FA /* ipadcats_data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D33A65252847F51000A307FA /* ipadcats_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; };
-		D33A652E2847F5F400A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
-		D33A652F2847F5F500A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
+		D33A65322848068100A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
+		D33A65332848068500A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
 		D39302D4283FDFD700BBD5F4 /* ipadcatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302D3283FDFD700BBD5F4 /* ipadcatsApp.swift */; };
 		D39302D6283FDFD700BBD5F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302D5283FDFD700BBD5F4 /* ContentView.swift */; };
 		D39302D8283FDFDA00BBD5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39302D7283FDFDA00BBD5F4 /* Assets.xcassets */; };
@@ -296,6 +296,7 @@
 				D39302CE283FDFD700BBD5F4 /* Resources */,
 				D3F2613428469FAF006169A8 /* Embed App Extensions */,
 				D33A65242847F50700A307FA /* Embed Frameworks */,
+				D3C8F03828493589002ED9FD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -396,6 +397,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3C8F03828493589002ED9FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D33A65072847F1A700A307FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -415,7 +436,7 @@
 				D3B623F02845429A0084930E /* Meme.swift in Sources */,
 				D3B623F2284543580084930E /* MyFavourites.swift in Sources */,
 				D39302E2283FDFF900BBD5F4 /* MyImage.swift in Sources */,
-				D33A652F2847F5F500A307FA /* Favourite.swift in Sources */,
+				D33A65332848068500A307FA /* Favourite.swift in Sources */,
 				D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */,
 				D39302D4283FDFD700BBD5F4 /* ipadcatsApp.swift in Sources */,
 				D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */,
@@ -427,7 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D33A652E2847F5F400A307FA /* Favourite.swift in Sources */,
+				D33A65322848068100A307FA /* Favourite.swift in Sources */,
 				D3F2613B2847BB86006169A8 /* FavouriteImageProvider.swift in Sources */,
 				D3F2612D28469FAD006169A8 /* widgets.swift in Sources */,
 			);
