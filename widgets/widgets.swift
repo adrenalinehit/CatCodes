@@ -63,6 +63,7 @@ struct Provider: TimelineProvider {
             StaticConfiguration(kind: kind, provider: Provider()) { entry in
                 WidgetsEntryView(entry: entry)
             }
+            .supportedFamilies([.systemSmall, .systemLarge])
             .configurationDisplayName("HTTP Codes Random Favourite")
             .description("Widget to show a random favourite meme.")
         }

@@ -26,7 +26,7 @@ class Favourite: Codable, Hashable, Comparable {
         hasher.combine(animal)
     }
 
-    static func <(lhs: Favourite, rhs: Favourite) -> Bool {
+    static func < (lhs: Favourite, rhs: Favourite) -> Bool {
         return lhs.code < rhs.code && lhs.animal.rawValue < rhs.animal.rawValue
     }
 }
