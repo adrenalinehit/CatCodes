@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct RandomCode: View {
-    
+
     @State private var code: HTTPStatusCode = HTTPStatusCode.notFound
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
-    
+
     var body: some View {
-        
+
         VStack {
             Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
                 .onAppear {
@@ -29,11 +29,11 @@ struct RandomCode: View {
                 } label: {
                     Label("Another...", systemImage: "chevron.right.2")
                 }
-                
+
             }
         }
     }
-    
+
     func newRandom() {
         code = HTTPStatusCode.allCases.randomElement()!
     }

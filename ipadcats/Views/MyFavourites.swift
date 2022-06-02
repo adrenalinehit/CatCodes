@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MyFavourites: View {
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
-    
+
     var body: some View {
-        
+
         if appPrefs.codeFavourites.isEmpty {
             VStack {
                 Text("Oops, you've not chosen any favourites yet...")
@@ -28,7 +28,7 @@ struct MyFavourites: View {
                             ForEach(appPrefs.codeFavourites.sorted(by: >), id: \.self) { fav in
                                 Meme(statusCode: fav.code, animalType: fav.animal).frame(width: geometry.size.width)
                             }
-                            
+
                         }
                     }
                     Spacer()

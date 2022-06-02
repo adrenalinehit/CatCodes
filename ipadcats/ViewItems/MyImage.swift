@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MyImage: View {
-    
+
     var imageURL: String
-    
+
     var body: some View {
-        AsyncImage(url: URL(string: imageURL)){ image in
+        AsyncImage(url: URL(string: imageURL)) { image in
             image
                 .resizable()
                 .scaledToFit()

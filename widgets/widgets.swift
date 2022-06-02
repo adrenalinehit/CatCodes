@@ -10,69 +10,67 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), image: UIImage(systemName:"multiply.circle.fill")!)
+        SimpleEntry(date: Date(), image: UIImage(systemName: "multiply.circle.fill")!)
     }
-    
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(date: Date(), image: UIImage(systemName: "multiply.circle.fill")!)
         completion(entry)
     }
-    
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        FavouriteImageProvider.randomFavouriteImage() { favImageResponse in
+
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
+        FavouriteImageProvider.randomFavouriteImage { favImageResponse in
             var entries: [SimpleEntry] = []
             var policy: TimelineReloadPolicy
             var entry: SimpleEntry
-            
+
             switch favImageResponse {
-            case .Failure:
+            case .failure:
                 entry = SimpleEntry(date: Date(), image: UIImage(named: "Error")!)
                 policy = .after(Calendar.current.date(byAdding: .minute, value: 15, to: Date())!)
-                break
-            case .Success(let image):
+            case .success(let image):
                 entry = SimpleEntry(date: Date(), image: image)
                 policy = .after(Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
-                break
             }
-            
+
             entries.append(entry)
-            
+
             let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
         }
     }
-    
+
     struct SimpleEntry: TimelineEntry {
         let date: Date
         let image: UIImage
     }
-    
-    struct widgetsEntryView : View {
+
+    struct WidgetsEntryView: View {
         var entry: Provider.Entry
-        
+
         var body: some View {
             Image(uiImage: entry.image)
                         .resizable()
                         .scaledToFill()
         }
     }
-    
+
     @main
-    struct widgets: Widget {
+    struct Widgets: Widget {
         let kind: String = "widgets"
-        
+
         var body: some WidgetConfiguration {
             StaticConfiguration(kind: kind, provider: Provider()) { entry in
-                widgetsEntryView(entry: entry)
+                WidgetsEntryView(entry: entry)
             }
             .configurationDisplayName("HTTP Codes Random Favourite")
             .description("Widget to show a random favourite meme.")
         }
     }
-    
-    struct widgets_Previews: PreviewProvider {
+
+    struct Widgets_Previews: PreviewProvider {
         static var previews: some View {
-            widgetsEntryView(entry: SimpleEntry(date: Date(), image: UIImage(systemName: "Placeholder")!))
+            WidgetsEntryView(entry: SimpleEntry(date: Date(), image: UIImage(systemName: "Placeholder")!))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
         }
     }

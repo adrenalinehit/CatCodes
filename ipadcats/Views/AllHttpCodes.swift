@@ -8,35 +8,35 @@
 import SwiftUI
 
 struct AllHttpCodes: View {
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
-    
+
     @State private var searchText = ""
-    
+
     var codes: [HTTPStatusCode] = HTTPStatusCode.allCases
-    
+
     var body: some View {
         List {
-            
+
             ForEach(HTTPStatusCode.ResponseType.allCases) { rType in
                 Text(rType.rawValue).font(.title2)
-                
-                ForEach(searchResults.filter{$0.responseType == rType}) { code in
-                    NavigationLink(destination: Meme(statusCode:code.rawValue, animalType: appPrefs.animalPreference)) {
+
+                ForEach(searchResults.filter {$0.responseType == rType}) { code in
+                    NavigationLink(destination: Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)) {
                         Text("HTTP Status Code: \(code.rawValue)")
                             .font(.body)
                             .padding()
                     }
                 }
-                
+
             }
         }
         .searchable(text: $searchText)
     }
-    
+
     var searchResults: [HTTPStatusCode] {
         let all: [HTTPStatusCode] = HTTPStatusCode.allCases
-        
+
         if searchText.isEmpty {
             return all
         } else {

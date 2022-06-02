@@ -10,25 +10,25 @@ import UIKit
 import ipadcats_data
 
 enum FavouriteResponse {
-    case Success(image:UIImage)
-    case Failure
+    case success(image: UIImage)
+    case failure
 }
 
 class FavouriteImageProvider {
-    
+
     static func randomFavouriteImage(completion: ((FavouriteResponse) -> Void)?) {
-        
+
         var codeFavourites: Set<Favourite> = []
-        
+
         if let data = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
             if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
                 codeFavourites = decoded
             }
         }
-        
+
         var urlString = ""
         let fav = codeFavourites.randomElement()
-        
+
         switch fav?.animal {
         case .cat:
             urlString="https://http.cat/\(fav?.code ?? 404).jpg"
@@ -37,28 +37,28 @@ class FavouriteImageProvider {
         case .none:
             urlString="https://http.cat/404.jpg"
         }
-        
+
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
-        
+
         let task = URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
             parseImageFromResponse(data: data, urlResponse: urlResponse, error: error, completion: completion)
         }
-        
+
         task.resume()
     }
-    
-    static func parseImageFromResponse(data: Data?, urlResponse: URLResponse?, error: Error?, completion: ((FavouriteResponse) -> Void)?){
-        
+
+    static func parseImageFromResponse(data: Data?, urlResponse: URLResponse?, error: Error?, completion: ((FavouriteResponse) -> Void)?) {
+
         guard error == nil, let content = data else {
             print("error getting image data")
-            let response = FavouriteResponse.Failure
+            let response = FavouriteResponse.failure
             completion?(response)
             return
         }
-        
+
         let image = UIImage(data: content)!
-        let response = FavouriteResponse.Success(image: image)
+        let response = FavouriteResponse.success(image: image)
         completion?(response)
     }
 }

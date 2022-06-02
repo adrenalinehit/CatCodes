@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     @StateObject var appPrefs = AppPreferences()
-    
+
     var body: some View {
         SidebarView()
             .environmentObject(appPrefs)

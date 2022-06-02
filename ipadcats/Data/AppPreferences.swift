@@ -11,7 +11,7 @@ import ipadcats_data
 class AppPreferences: ObservableObject {
     @Published var animalPreference = AnimalType.cat
     @Published var codeFavourites: Set<Favourite> = []
-    
+
     init() {
         if let data = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
             if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
@@ -27,27 +27,27 @@ class AppPreferences: ObservableObject {
 extension AppPreferences {
     func isFavourite(animal: AnimalType, code: Int) -> Bool {
         let favourite = Favourite(code: code, animal: animal)
-        
+
         return codeFavourites.contains(favourite)
     }
-    
+
     func favourite(animal: AnimalType, code: Int) {
         let favouriteItem = Favourite(code: code, animal: animal)
-        
-        if codeFavourites.contains(favouriteItem){
+
+        if codeFavourites.contains(favouriteItem) {
             codeFavourites.remove(favouriteItem)
             save(favs: codeFavourites)
         } else {
             codeFavourites.insert(favouriteItem)
             save(favs: codeFavourites)
         }
-        
+
     }
-    
+
     func save(favs: Set<Favourite>) {
         if let encoded = try? JSONEncoder().encode(favs) {
             UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.set(encoded, forKey: "Favourites")
         }
     }
-    
+
 }
