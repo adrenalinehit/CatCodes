@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct Meme: View {
 
@@ -47,6 +48,7 @@ struct Meme: View {
         appPrefs.favourite(animal: animalType, code: statusCode)
         let impactMed = UIImpactFeedbackGenerator(style: .heavy)
         impactMed.impactOccurred()
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     // todo: ugly, needs refactoring
