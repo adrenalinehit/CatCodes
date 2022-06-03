@@ -17,7 +17,6 @@ struct AllHttpCodes: View {
 
     var body: some View {
         List {
-
             ForEach(HTTPStatusCode.ResponseType.allCases) { rType in
                 Text(rType.rawValue).font(.title2)
 
@@ -28,7 +27,6 @@ struct AllHttpCodes: View {
                             .padding()
                     }
                 }
-
             }
         }
         .searchable(text: $searchText)

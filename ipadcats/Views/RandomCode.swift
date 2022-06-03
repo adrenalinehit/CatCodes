@@ -10,9 +10,9 @@ import SwiftUI
 struct RandomCode: View {
     @State private var code: HTTPStatusCode = HTTPStatusCode.notFound
     @State var randoms: [HTTPStatusCode] = []
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
-    
+
     var body: some View {
         VStack {
             Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
