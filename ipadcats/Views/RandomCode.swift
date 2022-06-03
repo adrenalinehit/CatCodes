@@ -8,34 +8,47 @@
 import SwiftUI
 
 struct RandomCode: View {
-
     @State private var code: HTTPStatusCode = HTTPStatusCode.notFound
-
+    @State var randoms: [HTTPStatusCode] = []
+    
     @EnvironmentObject var appPrefs: AppPreferences
-
+    
     var body: some View {
-
         VStack {
             Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
                 .onAppear {
-                    code = HTTPStatusCode.allCases.randomElement()!
+                    newRandom()
                 }
         }
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
+                Button {
+                    randoms = randoms.dropLast()
+                    let item = randoms.last
+                    code = randoms.popLast()!
+                    randoms.append(item!)
+                } label: {
+                    Label("Previous...", systemImage: "chevron.left.2")
+                }.hiddenConditionally(isHidden: randoms.count <= 1)
                 Spacer()
                 Button {
                     newRandom()
                 } label: {
                     Label("Another...", systemImage: "chevron.right.2")
                 }
-
             }
         }
     }
 
     func newRandom() {
         code = HTTPStatusCode.allCases.randomElement()!
+        randoms.append(code)
+    }
+}
+
+extension View {
+    func hiddenConditionally(isHidden: Bool) -> some View {
+        isHidden ? AnyView(self.hidden()) : AnyView(self)
     }
 }
 
