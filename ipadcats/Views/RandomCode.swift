@@ -14,27 +14,29 @@ struct RandomCode: View {
     @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
-        VStack {
-            Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
-                .onAppear {
-                    newRandom()
-                }
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomBar) {
-                Button {
-                    randoms = randoms.dropLast()
-                    let item = randoms.last
-                    code = randoms.popLast()!
-                    randoms.append(item!)
-                } label: {
-                    Label("Previous...", systemImage: "chevron.left.2")
-                }.hiddenConditionally(isHidden: randoms.count <= 1)
-                Spacer()
-                Button {
-                    newRandom()
-                } label: {
-                    Label("Another...", systemImage: "chevron.right.2")
+        NavigationView {
+            VStack {
+                Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
+                    .onAppear {
+                        newRandom()
+                    }
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button {
+                        randoms = randoms.dropLast()
+                        let item = randoms.last
+                        code = randoms.popLast()!
+                        randoms.append(item!)
+                    } label: {
+                        Label("Previous...", systemImage: "chevron.left.2")
+                    }.hiddenConditionally(isHidden: randoms.count <= 1)
+                    Spacer()
+                    Button {
+                        newRandom()
+                    } label: {
+                        Label("Another...", systemImage: "chevron.right.2")
+                    }
                 }
             }
         }

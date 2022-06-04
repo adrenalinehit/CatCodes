@@ -27,6 +27,8 @@
 		D3B623F42845461D0084930E /* RandomCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F32845461D0084930E /* RandomCode.swift */; };
 		D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F5284546370084930E /* AllHttpCodes.swift */; };
 		D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD0A022842A315005A957F /* AppPreferences.swift */; };
+		D3CDCE4F284BD82700D30E39 /* TabbedViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CDCE4E284BD82700D30E39 /* TabbedViewHome.swift */; };
+		D3CDCE51284BD94E00D30E39 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CDCE50284BD94E00D30E39 /* Tabs.swift */; };
 		D3F2612828469FAD006169A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F2612728469FAD006169A8 /* WidgetKit.framework */; };
 		D3F2612A28469FAD006169A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F2612928469FAD006169A8 /* SwiftUI.framework */; };
 		D3F2612D28469FAD006169A8 /* widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2612C28469FAD006169A8 /* widgets.swift */; };
@@ -110,6 +112,8 @@
 		D3B623F5284546370084930E /* AllHttpCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHttpCodes.swift; sourceTree = "<group>"; };
 		D3B623F82845468F0084930E /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		D3BD0A022842A315005A957F /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		D3CDCE4E284BD82700D30E39 /* TabbedViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedViewHome.swift; sourceTree = "<group>"; };
+		D3CDCE50284BD94E00D30E39 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		D3F2612528469FAD006169A8 /* widgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F2612728469FAD006169A8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D3F2612928469FAD006169A8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -213,6 +217,7 @@
 				D3B623F32845461D0084930E /* RandomCode.swift */,
 				D3B623F5284546370084930E /* AllHttpCodes.swift */,
 				D39302E3283FE75B00BBD5F4 /* SidebarView.swift */,
+				D3CDCE4E284BD82700D30E39 /* TabbedViewHome.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			children = (
 				D3BD0A022842A315005A957F /* AppPreferences.swift */,
 				D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */,
+				D3CDCE50284BD94E00D30E39 /* Tabs.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -430,7 +436,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CDCE51284BD94E00D30E39 /* Tabs.swift in Sources */,
 				D3B623F42845461D0084930E /* RandomCode.swift in Sources */,
+				D3CDCE4F284BD82700D30E39 /* TabbedViewHome.swift in Sources */,
 				D39302D6283FDFD700BBD5F4 /* ContentView.swift in Sources */,
 				D39302E4283FE75B00BBD5F4 /* SidebarView.swift in Sources */,
 				D3B623F02845429A0084930E /* Meme.swift in Sources */,

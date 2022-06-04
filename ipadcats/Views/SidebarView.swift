@@ -12,34 +12,33 @@ struct SidebarView: View {
     @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
-        NavigationView {
-            List {
 
-                NavigationLink(destination: AllHttpCodes()) {
-                    Label("All HTTP Status Codes", systemImage: "list.bullet.rectangle")
-                }
+        List {
 
-                NavigationLink(destination: MyFavourites()) {
-                    Label("My Favourites", systemImage: "list.bullet.rectangle")
-                }
-
-                NavigationLink(destination: RandomCode()) {
-                    Label("Random Status Code", systemImage: "shuffle")
-                }
-
-                Picker("Animal Type", selection: $appPrefs.animalPreference) {
-                    Text("Cats").tag(AnimalType.cat)
-                    Text("Dogs").tag(AnimalType.dog)
-                }.pickerStyle(.segmented)
-
+            NavigationLink(destination: AllHttpCodes()) {
+                Label("All HTTP Status Codes", systemImage: "list.bullet.rectangle")
             }
 
-            .listStyle(SidebarListStyle())
-            .navigationTitle("Statuses")
+            NavigationLink(destination: MyFavourites()) {
+                Label("My Favourites", systemImage: "list.bullet.rectangle")
+            }
 
-            MyFavourites()
-            // RandomCode()
+            NavigationLink(destination: RandomCode()) {
+                Label("Random Status Code", systemImage: "shuffle")
+            }
+
+            Picker("Animal Type", selection: $appPrefs.animalPreference) {
+                Text("Cats").tag(AnimalType.cat)
+                Text("Dogs").tag(AnimalType.dog)
+            }.pickerStyle(.segmented)
+
         }
+
+        .listStyle(SidebarListStyle())
+        .navigationTitle("Statuses")
+
+        // MyFavourites()
+        // RandomCode()
 
     }
 }

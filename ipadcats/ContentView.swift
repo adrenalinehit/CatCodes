@@ -12,8 +12,12 @@ struct ContentView: View {
     @StateObject var appPrefs = AppPreferences()
 
     var body: some View {
-        SidebarView()
-            .environmentObject(appPrefs)
+        NavigationView {
+            TabbedViewHome()
+
+            // SidebarView()
+
+        }.environmentObject(appPrefs)
     }
 }
 
