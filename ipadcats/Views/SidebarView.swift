@@ -27,6 +27,10 @@ struct SidebarView: View {
                     Label("Random Status Code", systemImage: "shuffle")
                 }
 
+                NavigationLink(destination: GameMode()) {
+                    Label("Game mode", systemImage: "shuffle")
+                }
+
                 Picker("Animal Type", selection: $appPrefs.animalPreference) {
                     Text("Cats").tag(AnimalType.cat)
                     Text("Dogs").tag(AnimalType.dog)
