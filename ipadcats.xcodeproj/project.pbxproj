@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,7 +31,7 @@
 		D3F2612A28469FAD006169A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F2612928469FAD006169A8 /* SwiftUI.framework */; };
 		D3F2612D28469FAD006169A8 /* widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2612C28469FAD006169A8 /* widgets.swift */; };
 		D3F2612F28469FAF006169A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F2612E28469FAF006169A8 /* Assets.xcassets */; };
-		D3F2613328469FAF006169A8 /* widgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3F2612528469FAD006169A8 /* widgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3F2613328469FAF006169A8 /* widgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D3F2612528469FAD006169A8 /* widgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D3F2613B2847BB86006169A8 /* FavouriteImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2613A2847BB86006169A8 /* FavouriteImageProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,15 +78,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3F2613428469FAF006169A8 /* Embed App Extensions */ = {
+		D3F2613428469FAF006169A8 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D3F2613328469FAF006169A8 /* widgetsExtension.appex in Embed App Extensions */,
+				D3F2613328469FAF006169A8 /* widgetsExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -294,7 +294,7 @@
 				D39302CC283FDFD700BBD5F4 /* Sources */,
 				D39302CD283FDFD700BBD5F4 /* Frameworks */,
 				D39302CE283FDFD700BBD5F4 /* Resources */,
-				D3F2613428469FAF006169A8 /* Embed App Extensions */,
+				D3F2613428469FAF006169A8 /* Embed Foundation Extensions */,
 				D33A65242847F50700A307FA /* Embed Frameworks */,
 				D3C8F03828493589002ED9FD /* ShellScript */,
 			);
@@ -336,7 +336,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					D33A650A2847F1A700A307FA = {
 						CreatedOnToolsVersion = 13.4;
@@ -350,7 +350,7 @@
 				};
 			};
 			buildConfigurationList = D39302CB283FDFD700BBD5F4 /* Build configuration list for PBXProject "ipadcats" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -592,7 +592,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -646,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
