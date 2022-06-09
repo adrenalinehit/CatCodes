@@ -71,7 +71,7 @@ struct Provider: TimelineProvider {
 
     struct Widgets_Previews: PreviewProvider {
         static var previews: some View {
-            WidgetsEntryView(entry: SimpleEntry(date: Date(), image: UIImage(systemName: "Placeholder")!))
+            WidgetsEntryView(entry: SimpleEntry(date: Date(), image: UIImage(systemName: "placeholdertext.fill")!))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
         }
     }
