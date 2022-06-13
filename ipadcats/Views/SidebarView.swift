@@ -38,7 +38,7 @@ struct SidebarView: View {
         .navigationTitle("Statuses")
 
         // MyFavourites()
-        // RandomCode()
+        //RandomCode()
 
     }
 }

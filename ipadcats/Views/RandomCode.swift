@@ -14,13 +14,13 @@ struct RandomCode: View {
     @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
-        NavigationView {
-            VStack {
+        //NavigationView {
+            //VStack {
                 Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
                     .onAppear {
                         newRandom()
                     }
-            }
+            //}
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Button {
@@ -39,7 +39,7 @@ struct RandomCode: View {
                     }
                 }
             }
-        }
+        //}
     }
 
     func newRandom() {

@@ -13,7 +13,7 @@ struct MyFavourites: View {
 
     var body: some View {
 
-        NavigationView {
+        //NavigationView {
             if appPrefs.codeFavourites.isEmpty {
                 VStack {
                     Text("Oops, you've not chosen any favourites yet...")
@@ -36,7 +36,7 @@ struct MyFavourites: View {
                     }
                 }
             }
-        }
+        //}
     }
 }
 
