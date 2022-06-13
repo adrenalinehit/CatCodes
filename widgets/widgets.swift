@@ -51,7 +51,7 @@ struct Provider: TimelineProvider {
         var body: some View {
             Image(uiImage: entry.image)
                         .resizable()
-                        .scaledToFill()
+                        .aspectRatio(contentMode: .fit)
         }
     }
 
@@ -63,7 +63,7 @@ struct Provider: TimelineProvider {
             StaticConfiguration(kind: kind, provider: Provider()) { entry in
                 WidgetsEntryView(entry: entry)
             }
-            .supportedFamilies([.systemSmall, .systemLarge])
+            .supportedFamilies([.systemSmall, .systemLarge, .accessoryRectangular])
             .configurationDisplayName("HTTP Codes Random Favourite")
             .description("Widget to show a random favourite meme.")
         }
@@ -71,7 +71,7 @@ struct Provider: TimelineProvider {
 
     struct Widgets_Previews: PreviewProvider {
         static var previews: some View {
-            WidgetsEntryView(entry: SimpleEntry(date: Date(), image: UIImage(systemName: "Placeholder")!))
+            WidgetsEntryView(entry: SimpleEntry(date: Date(), image: UIImage(systemName: "placeholdertext.fill")!))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
         }
     }
