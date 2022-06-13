@@ -12,8 +12,6 @@ struct Meme: View {
 
     @EnvironmentObject var appPrefs: AppPreferences
 
-    @GestureState var press = false
-
     var statusCode = 404
     var animalType = AnimalType.cat
 
