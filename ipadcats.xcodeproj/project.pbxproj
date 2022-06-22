@@ -22,6 +22,8 @@
 		D39302E4283FE75B00BBD5F4 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E3283FE75B00BBD5F4 /* SidebarView.swift */; };
 		D39302E6283FE89500BBD5F4 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
 		D39302E8283FF1ED00BBD5F4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39302E7283FF1ED00BBD5F4 /* Launch Screen.storyboard */; };
+		D3A315832863A41500E6B966 /* ipadcatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A315822863A41500E6B966 /* ipadcatsUITests.swift */; };
+		D3A315852863A41500E6B966 /* ipadcatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A315842863A41500E6B966 /* ipadcatsUITestsLaunchTests.swift */; };
 		D3B623F02845429A0084930E /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623EF2845429A0084930E /* Meme.swift */; };
 		D3B623F2284543580084930E /* MyFavourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F1284543580084930E /* MyFavourites.swift */; };
 		D3B623F42845461D0084930E /* RandomCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F32845461D0084930E /* RandomCode.swift */; };
@@ -56,6 +58,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D33A650A2847F1A700A307FA;
 			remoteInfo = ipadcats.data;
+		};
+		D3A315862863A41500E6B966 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39302C8283FDFD700BBD5F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D39302CF283FDFD700BBD5F4;
+			remoteInfo = ipadcats;
 		};
 		D3F2613128469FAF006169A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -104,6 +113,9 @@
 		D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		D39302E7283FF1ED00BBD5F4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D39302E9283FF2CC00BBD5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3A315802863A41500E6B966 /* ipadcatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipadcatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A315822863A41500E6B966 /* ipadcatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipadcatsUITests.swift; sourceTree = "<group>"; };
+		D3A315842863A41500E6B966 /* ipadcatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipadcatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3B623EF2845429A0084930E /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		D3B623F1284543580084930E /* MyFavourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavourites.swift; sourceTree = "<group>"; };
 		D3B623F32845461D0084930E /* RandomCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCode.swift; sourceTree = "<group>"; };
@@ -137,6 +149,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3A3157D2863A41500E6B966 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F2612228469FAD006169A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +185,7 @@
 				D39302D2283FDFD700BBD5F4 /* ipadcats */,
 				D3F2612B28469FAD006169A8 /* widgets */,
 				D33A650C2847F1A700A307FA /* ipadcats.data */,
+				D3A315812863A41500E6B966 /* ipadcatsUITests */,
 				D3F2612628469FAD006169A8 /* Frameworks */,
 				D39302D1283FDFD700BBD5F4 /* Products */,
 			);
@@ -177,6 +197,7 @@
 				D39302D0283FDFD700BBD5F4 /* ipadcats.app */,
 				D3F2612528469FAD006169A8 /* widgetsExtension.appex */,
 				D33A650B2847F1A700A307FA /* ipadcats_data.framework */,
+				D3A315802863A41500E6B966 /* ipadcatsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +225,15 @@
 				D39302DA283FDFDA00BBD5F4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3A315812863A41500E6B966 /* ipadcatsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3A315822863A41500E6B966 /* ipadcatsUITests.swift */,
+				D3A315842863A41500E6B966 /* ipadcatsUITestsLaunchTests.swift */,
+			);
+			path = ipadcatsUITests;
 			sourceTree = "<group>";
 		};
 		D3B623ED284542810084930E /* Views */ = {
@@ -310,6 +340,24 @@
 			productReference = D39302D0283FDFD700BBD5F4 /* ipadcats.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D3A3157F2863A41500E6B966 /* ipadcatsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A3158A2863A41500E6B966 /* Build configuration list for PBXNativeTarget "ipadcatsUITests" */;
+			buildPhases = (
+				D3A3157C2863A41500E6B966 /* Sources */,
+				D3A3157D2863A41500E6B966 /* Frameworks */,
+				D3A3157E2863A41500E6B966 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3A315872863A41500E6B966 /* PBXTargetDependency */,
+			);
+			name = ipadcatsUITests;
+			productName = ipadcatsUITests;
+			productReference = D3A315802863A41500E6B966 /* ipadcatsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D3F2612428469FAD006169A8 /* widgetsExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F2613728469FAF006169A8 /* Build configuration list for PBXNativeTarget "widgetsExtension" */;
@@ -335,7 +383,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					D33A650A2847F1A700A307FA = {
@@ -343,6 +391,10 @@
 					};
 					D39302CF283FDFD700BBD5F4 = {
 						CreatedOnToolsVersion = 13.4;
+					};
+					D3A3157F2863A41500E6B966 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = D39302CF283FDFD700BBD5F4;
 					};
 					D3F2612428469FAD006169A8 = {
 						CreatedOnToolsVersion = 13.4;
@@ -365,6 +417,7 @@
 				D39302CF283FDFD700BBD5F4 /* ipadcats */,
 				D3F2612428469FAD006169A8 /* widgetsExtension */,
 				D33A650A2847F1A700A307FA /* ipadcats.data */,
+				D3A3157F2863A41500E6B966 /* ipadcatsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -384,6 +437,13 @@
 				D39302E8283FF1ED00BBD5F4 /* Launch Screen.storyboard in Resources */,
 				D39302DB283FDFDA00BBD5F4 /* Preview Assets.xcassets in Resources */,
 				D39302D8283FDFDA00BBD5F4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A3157E2863A41500E6B966 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +504,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3A3157C2863A41500E6B966 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A315852863A41500E6B966 /* ipadcatsUITestsLaunchTests.swift in Sources */,
+				D3A315832863A41500E6B966 /* ipadcatsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3F2612128469FAD006169A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +540,11 @@
 			isa = PBXTargetDependency;
 			target = D33A650A2847F1A700A307FA /* ipadcats.data */;
 			targetProxy = D33A65272847F51000A307FA /* PBXContainerItemProxy */;
+		};
+		D3A315872863A41500E6B966 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D39302CF283FDFD700BBD5F4 /* ipadcats */;
+			targetProxy = D3A315862863A41500E6B966 /* PBXContainerItemProxy */;
 		};
 		D3F2613228469FAF006169A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -720,6 +794,40 @@
 			};
 			name = Release;
 		};
+		D3A315882863A41500E6B966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W24S2RJT7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcatsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ipadcats;
+			};
+			name = Debug;
+		};
+		D3A315892863A41500E6B966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W24S2RJT7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcatsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ipadcats;
+			};
+			name = Release;
+		};
 		D3F2613528469FAF006169A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -802,6 +910,15 @@
 			buildConfigurations = (
 				D39302DF283FDFDA00BBD5F4 /* Debug */,
 				D39302E0283FDFDA00BBD5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A3158A2863A41500E6B966 /* Build configuration list for PBXNativeTarget "ipadcatsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A315882863A41500E6B966 /* Debug */,
+				D3A315892863A41500E6B966 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
