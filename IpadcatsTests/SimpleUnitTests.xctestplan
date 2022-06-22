@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "EDAB803C-437E-4AFD-8402-7615C0AF8B9E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ipadcats.xcodeproj",
+        "identifier" : "D3A3158E2863ADCB00E6B966",
+        "name" : "IpadcatsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
