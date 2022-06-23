@@ -20,12 +20,7 @@ struct Meme: View {
 
             AnimalSwitcher(appPrefs: _appPrefs)
 
-            switch animalType {
-            case .cat:
-                MyImage(imageURL: "https://http.cat/\(statusCode).jpg")
-            case .dog:
-                MyImage(imageURL: "https://http.dog/\(statusCode).jpg")
-            }
+            MyImage(animalType: animalType, statusCode: statusCode)
 
             HStack {
                 ShareButton(statusCode: statusCode, animalType: animalType)

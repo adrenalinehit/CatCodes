@@ -17,12 +17,7 @@ struct FavouriteMeme: View {
     var body: some View {
         VStack {
 
-            switch animalType {
-            case .cat:
-                MyImage(imageURL: "https://http.cat/\(statusCode).jpg")
-            case .dog:
-                MyImage(imageURL: "https://http.dog/\(statusCode).jpg")
-            }
+            MyImage(animalType: animalType, statusCode: statusCode)
 
             HStack {
                 ShareButton(statusCode: statusCode, animalType: animalType)
