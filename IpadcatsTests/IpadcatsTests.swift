@@ -21,7 +21,7 @@ final class IpadcatsTests: XCTestCase {
     func testFavouriteEquality() throws {
         let fav1 = Favourite(code: 100, animal: .dog)
         let fav2 = Favourite(code: 100, animal: .cat)
-        
+
         XCTAssertNotEqual(fav1, fav2)
     }
 

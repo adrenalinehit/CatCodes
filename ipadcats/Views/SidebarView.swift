@@ -27,10 +27,7 @@ struct SidebarView: View {
                     Label("Random Status Code", systemImage: "shuffle")
                 }
 
-                Picker("Animal Type", selection: $appPrefs.animalPreference) {
-                    Text("Cats").tag(AnimalType.cat)
-                    Text("Dogs").tag(AnimalType.dog)
-                }.pickerStyle(.segmented)
+                AnimalSwitcher(appPrefs: _appPrefs)
 
             }
 

@@ -31,6 +31,9 @@
 		D3B623F42845461D0084930E /* RandomCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F32845461D0084930E /* RandomCode.swift */; };
 		D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F5284546370084930E /* AllHttpCodes.swift */; };
 		D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD0A022842A315005A957F /* AppPreferences.swift */; };
+		D3E872372864E93F001C5C06 /* AnimalSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E872362864E93F001C5C06 /* AnimalSwitcher.swift */; };
+		D3E872392864EEDB001C5C06 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E872382864EEDB001C5C06 /* ShareButton.swift */; };
+		D3E8723B2864F09F001C5C06 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8723A2864F09F001C5C06 /* FavouriteButton.swift */; };
 		D3F2612828469FAD006169A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F2612728469FAD006169A8 /* WidgetKit.framework */; };
 		D3F2612A28469FAD006169A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F2612928469FAD006169A8 /* SwiftUI.framework */; };
 		D3F2612D28469FAD006169A8 /* widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2612C28469FAD006169A8 /* widgets.swift */; };
@@ -134,6 +137,9 @@
 		D3B623F5284546370084930E /* AllHttpCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHttpCodes.swift; sourceTree = "<group>"; };
 		D3B623F82845468F0084930E /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		D3BD0A022842A315005A957F /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		D3E872362864E93F001C5C06 /* AnimalSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSwitcher.swift; sourceTree = "<group>"; };
+		D3E872382864EEDB001C5C06 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		D3E8723A2864F09F001C5C06 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 		D3F2612528469FAD006169A8 /* widgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F2612728469FAD006169A8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D3F2612928469FAD006169A8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -283,6 +289,9 @@
 			children = (
 				D39302E1283FDFF900BBD5F4 /* MyImage.swift */,
 				D3B623EF2845429A0084930E /* Meme.swift */,
+				D3E872362864E93F001C5C06 /* AnimalSwitcher.swift */,
+				D3E872382864EEDB001C5C06 /* ShareButton.swift */,
+				D3E8723A2864F09F001C5C06 /* FavouriteButton.swift */,
 			);
 			path = ViewItems;
 			sourceTree = "<group>";
@@ -556,10 +565,13 @@
 				D3B623F02845429A0084930E /* Meme.swift in Sources */,
 				D3B623F2284543580084930E /* MyFavourites.swift in Sources */,
 				D39302E2283FDFF900BBD5F4 /* MyImage.swift in Sources */,
+				D3E872372864E93F001C5C06 /* AnimalSwitcher.swift in Sources */,
 				D33A65332848068500A307FA /* Favourite.swift in Sources */,
 				D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */,
+				D3E8723B2864F09F001C5C06 /* FavouriteButton.swift in Sources */,
 				D39302D4283FDFD700BBD5F4 /* ipadcatsApp.swift in Sources */,
 				D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */,
+				D3E872392864EEDB001C5C06 /* ShareButton.swift in Sources */,
 				D39302E6283FE89500BBD5F4 /* HTTPStatusCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
