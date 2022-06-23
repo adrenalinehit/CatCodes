@@ -22,15 +22,15 @@ struct RandomCode: View {
         }
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
+                
                 Button {
-                    randoms = randoms.dropLast()
-                    let item = randoms.last
-                    code = randoms.popLast()!
-                    randoms.append(item!)
+                    goBack()
                 } label: {
                     Label("Previous...", systemImage: "chevron.left.2")
                 }.hiddenConditionally(isHidden: randoms.count <= 1)
+                
                 Spacer()
+                
                 Button {
                     newRandom()
                 } label: {
@@ -43,6 +43,13 @@ struct RandomCode: View {
     func newRandom() {
         code = HTTPStatusCode.allCases.randomElement()!
         randoms.append(code)
+    }
+    
+    func goBack() {
+        randoms = randoms.dropLast()
+        let item = randoms.last
+        code = randoms.popLast()!
+        randoms.append(item!)
     }
 }
 
