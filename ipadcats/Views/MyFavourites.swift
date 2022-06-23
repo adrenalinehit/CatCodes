@@ -26,7 +26,7 @@ struct MyFavourites: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(appPrefs.codeFavourites.sorted(by: >), id: \.self) { fav in
-                                Meme(statusCode: fav.code, animalType: fav.animal).frame(width: geometry.size.width)
+                                FavouriteMeme(statusCode: fav.code, animalType: fav.animal).frame(width: geometry.size.width)
                             }
 
                         }
