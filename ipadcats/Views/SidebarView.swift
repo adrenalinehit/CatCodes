@@ -32,7 +32,7 @@ struct SidebarView: View {
             }
 
             .listStyle(SidebarListStyle())
-            .navigationTitle("Statuses")
+            .navigationTitle("HTTP Codes")
 
             MyFavourites()
             // RandomCode()

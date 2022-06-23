@@ -18,7 +18,7 @@ struct MyFavourites: View {
                 Text("Oops, you've not chosen any favourites yet...")
                     .multilineTextAlignment(.center)
                     .padding(.all)
-            }
+            }.navigationTitle("My Favourites")
         } else {
             GeometryReader { geometry in
                 VStack(alignment: .center) {
@@ -28,11 +28,10 @@ struct MyFavourites: View {
                             ForEach(appPrefs.codeFavourites.sorted(by: >), id: \.self) { fav in
                                 FavouriteMeme(statusCode: fav.code, animalType: fav.animal).frame(width: geometry.size.width)
                             }
-
                         }
                     }
                     Spacer()
-                }
+                }.navigationTitle("My Favourites")
             }
         }
     }

@@ -16,17 +16,21 @@ struct Meme: View {
     var animalType = AnimalType.cat
 
     var body: some View {
+
         VStack {
 
-            AnimalSwitcher(appPrefs: _appPrefs)
+            AnimalSwitcher(appPrefs: _appPrefs).padding()
 
             MyImage(animalType: animalType, statusCode: statusCode)
+                .padding()
 
             HStack {
                 ShareButton(statusCode: statusCode, animalType: animalType)
                 FavouriteButton(appPrefs: _appPrefs, statusCode: statusCode, animalType: animalType)
-            }
+            }.padding()
         }
+        .navigationTitle(Text("Meme"))
+
     }
 }
 

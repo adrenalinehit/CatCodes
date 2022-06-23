@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavouriteMeme: View {
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
 
     var statusCode = 404

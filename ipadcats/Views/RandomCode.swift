@@ -22,7 +22,7 @@ struct RandomCode: View {
         }
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
-    
+
                 Button {
                     goBack()
                 } label: {
