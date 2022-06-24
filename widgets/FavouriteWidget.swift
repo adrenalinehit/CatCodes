@@ -57,7 +57,7 @@ struct FavouriteWidgetView: View {
 }
 
 struct FavouriteWidget: Widget {
-    let kind: String = "widgets"
+    let kind: String = "favourites"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: FavouriteWidgetProvider()) { entry in
