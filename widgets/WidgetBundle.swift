@@ -12,6 +12,6 @@ import SwiftUI
 struct HttpCodeWidgets: WidgetBundle {
    var body: some Widget {
        FavouriteWidget()
-
+       ChartWidget()
    }
 }

@@ -19,7 +19,7 @@ struct FavouriteWidgetProvider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
-        FavouriteImageProvider.randomFavouriteImage { favImageResponse in
+        WidgetDataProvider.randomFavouriteImage { favImageResponse in
             var entries: [FavouriteWidgetEntry] = []
             var policy: TimelineReloadPolicy
             var entry: FavouriteWidgetEntry
@@ -69,7 +69,7 @@ struct FavouriteWidget: Widget {
     }
 }
 
-struct Widgets_Previews: PreviewProvider {
+struct FavouriteWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         FavouriteWidgetView(entry: FavouriteWidgetEntry(date: Date(), image: UIImage(systemName: "placeholdertext.fill")!))
             .previewContext(WidgetPreviewContext(family: .systemSmall))

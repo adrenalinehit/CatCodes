@@ -14,10 +14,9 @@ enum FavouriteResponse {
     case failure
 }
 
-class FavouriteImageProvider {
+class WidgetDataProvider {
 
-    static func randomFavouriteImage(completion: ((FavouriteResponse) -> Void)?) {
-
+    private static func loadData() -> Set<Favourite> {
         var codeFavourites: Set<Favourite> = []
 
         if let data = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
@@ -25,9 +24,16 @@ class FavouriteImageProvider {
                 codeFavourites = decoded
             }
         }
+        
+        return codeFavourites
+    }
+    
+    static func randomFavouriteImage(completion: ((FavouriteResponse) -> Void)?) {
+
+        let favourites = loadData()
 
         var urlString = ""
-        let fav = codeFavourites.randomElement()
+        let fav = favourites.randomElement()
 
         switch fav?.animal {
         case .cat:
@@ -48,7 +54,7 @@ class FavouriteImageProvider {
         task.resume()
     }
 
-    static func parseImageFromResponse(data: Data?, urlResponse: URLResponse?, error: Error?, completion: ((FavouriteResponse) -> Void)?) {
+    private static func parseImageFromResponse(data: Data?, urlResponse: URLResponse?, error: Error?, completion: ((FavouriteResponse) -> Void)?) {
 
         guard error == nil, let content = data else {
             print("error getting image data")

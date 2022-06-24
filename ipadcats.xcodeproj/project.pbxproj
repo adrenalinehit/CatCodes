@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D333F3D62866061C00AFA6D1 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D333F3D52866061C00AFA6D1 /* WidgetBundle.swift */; };
+		D333F3D828660F2E00AFA6D1 /* ChartWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D333F3D728660F2E00AFA6D1 /* ChartWidget.swift */; };
 		D33A650E2847F1A700A307FA /* ipadcats_data.h in Headers */ = {isa = PBXBuildFile; fileRef = D33A650D2847F1A700A307FA /* ipadcats_data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D33A65172847F1B700A307FA /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F82845468F0084930E /* Favourite.swift */; };
 		D33A65202847F50700A307FA /* ipadcats_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A650B2847F1A700A307FA /* ipadcats_data.framework */; };
@@ -41,7 +42,7 @@
 		D3F2612D28469FAD006169A8 /* FavouriteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2612C28469FAD006169A8 /* FavouriteWidget.swift */; };
 		D3F2612F28469FAF006169A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F2612E28469FAF006169A8 /* Assets.xcassets */; };
 		D3F2613328469FAF006169A8 /* widgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D3F2612528469FAD006169A8 /* widgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D3F2613B2847BB86006169A8 /* FavouriteImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2613A2847BB86006169A8 /* FavouriteImageProvider.swift */; };
+		D3F2613B2847BB86006169A8 /* WidgetDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2613A2847BB86006169A8 /* WidgetDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 
 /* Begin PBXFileReference section */
 		D333F3D52866061C00AFA6D1 /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
+		D333F3D728660F2E00AFA6D1 /* ChartWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartWidget.swift; sourceTree = "<group>"; };
 		D33A650B2847F1A700A307FA /* ipadcats_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ipadcats_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33A650D2847F1A700A307FA /* ipadcats_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipadcats_data.h; sourceTree = "<group>"; };
 		D39302D0283FDFD700BBD5F4 /* ipadcats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipadcats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +154,7 @@
 		D3F2613028469FAF006169A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3F261382846A608006169A8 /* ipadcats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ipadcats.entitlements; sourceTree = "<group>"; };
 		D3F261392846A647006169A8 /* widgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetsExtension.entitlements; sourceTree = "<group>"; };
-		D3F2613A2847BB86006169A8 /* FavouriteImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteImageProvider.swift; sourceTree = "<group>"; };
+		D3F2613A2847BB86006169A8 /* WidgetDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,8 +327,9 @@
 				D3F2612C28469FAD006169A8 /* FavouriteWidget.swift */,
 				D3F2612E28469FAF006169A8 /* Assets.xcassets */,
 				D3F2613028469FAF006169A8 /* Info.plist */,
-				D3F2613A2847BB86006169A8 /* FavouriteImageProvider.swift */,
+				D3F2613A2847BB86006169A8 /* WidgetDataProvider.swift */,
 				D333F3D52866061C00AFA6D1 /* WidgetBundle.swift */,
+				D333F3D728660F2E00AFA6D1 /* ChartWidget.swift */,
 			);
 			path = widgets;
 			sourceTree = "<group>";
@@ -605,7 +608,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33A65322848068100A307FA /* Favourite.swift in Sources */,
-				D3F2613B2847BB86006169A8 /* FavouriteImageProvider.swift in Sources */,
+				D3F2613B2847BB86006169A8 /* WidgetDataProvider.swift in Sources */,
+				D333F3D828660F2E00AFA6D1 /* ChartWidget.swift in Sources */,
 				D3F2612D28469FAD006169A8 /* FavouriteWidget.swift in Sources */,
 				D333F3D62866061C00AFA6D1 /* WidgetBundle.swift in Sources */,
 			);
