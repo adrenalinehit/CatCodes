@@ -16,11 +16,11 @@ struct SidebarView: View {
             List {
 
                 NavigationLink(destination: AllHttpCodes()) {
-                    Label("All HTTP Status Codes", systemImage: "list.bullet.rectangle")
+                    Label("All HTTP Status Codes", systemImage: "list.bullet")
                 }
 
                 NavigationLink(destination: MyFavourites()) {
-                    Label("My Favourites", systemImage: "list.bullet.rectangle")
+                    Label("My Favourites", systemImage: "list.star")
                 }
 
                 NavigationLink(destination: RandomCode()) {
