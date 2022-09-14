@@ -31,6 +31,8 @@
 		D3B623F42845461D0084930E /* RandomCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F32845461D0084930E /* RandomCode.swift */; };
 		D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B623F5284546370084930E /* AllHttpCodes.swift */; };
 		D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD0A022842A315005A957F /* AppPreferences.swift */; };
+		D3DA267C28CA5DCB0078F44D /* SnapshotTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA267B28CA5DCB0078F44D /* SnapshotTester.swift */; };
+		D3DA267F28CA5DEA0078F44D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D3DA267E28CA5DEA0078F44D /* SnapshotTesting */; };
 		D3E872372864E93F001C5C06 /* AnimalSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E872362864E93F001C5C06 /* AnimalSwitcher.swift */; };
 		D3E872392864EEDB001C5C06 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E872382864EEDB001C5C06 /* ShareButton.swift */; };
 		D3E8723B2864F09F001C5C06 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8723A2864F09F001C5C06 /* FavouriteButton.swift */; };
@@ -78,6 +80,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D33A650A2847F1A700A307FA;
 			remoteInfo = ipadcats.data;
+		};
+		D3DA268028CA5FEB0078F44D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39302C8283FDFD700BBD5F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D39302CF283FDFD700BBD5F4;
+			remoteInfo = ipadcats;
 		};
 		D3F2613128469FAF006169A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -138,6 +147,7 @@
 		D3B623F5284546370084930E /* AllHttpCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHttpCodes.swift; sourceTree = "<group>"; };
 		D3B623F82845468F0084930E /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		D3BD0A022842A315005A957F /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		D3DA267B28CA5DCB0078F44D /* SnapshotTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotTester.swift; sourceTree = "<group>"; };
 		D3E872362864E93F001C5C06 /* AnimalSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSwitcher.swift; sourceTree = "<group>"; };
 		D3E872382864EEDB001C5C06 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
 		D3E8723A2864F09F001C5C06 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
@@ -181,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A315932863ADCB00E6B966 /* ipadcats_data.framework in Frameworks */,
+				D3DA267F28CA5DEA0078F44D /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +280,7 @@
 		D3A315902863ADCB00E6B966 /* IpadcatsTests */ = {
 			isa = PBXGroup;
 			children = (
+				D3DA267B28CA5DCB0078F44D /* SnapshotTester.swift */,
 				D3A315912863ADCB00E6B966 /* IpadcatsTests.swift */,
 				D3A315992863AEDA00E6B966 /* SimpleUnitTests.xctestplan */,
 			);
@@ -413,8 +425,12 @@
 			);
 			dependencies = (
 				D3A315952863ADCB00E6B966 /* PBXTargetDependency */,
+				D3DA268128CA5FEB0078F44D /* PBXTargetDependency */,
 			);
 			name = IpadcatsTests;
+			packageProductDependencies = (
+				D3DA267E28CA5DEA0078F44D /* SnapshotTesting */,
+			);
 			productName = IpadcatsTests;
 			productReference = D3A3158F2863ADCB00E6B966 /* IpadcatsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -459,6 +475,7 @@
 					};
 					D3A3158E2863ADCB00E6B966 = {
 						CreatedOnToolsVersion = 14.0;
+						TestTargetID = D39302CF283FDFD700BBD5F4;
 					};
 					D3F2612428469FAD006169A8 = {
 						CreatedOnToolsVersion = 13.4;
@@ -474,6 +491,9 @@
 				Base,
 			);
 			mainGroup = D39302C7283FDFD700BBD5F4;
+			packageReferences = (
+				D3DA267D28CA5DEA0078F44D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = D39302D1283FDFD700BBD5F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -593,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DA267C28CA5DCB0078F44D /* SnapshotTester.swift in Sources */,
 				D3A315922863ADCB00E6B966 /* IpadcatsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +655,11 @@
 			isa = PBXTargetDependency;
 			target = D33A650A2847F1A700A307FA /* ipadcats.data */;
 			targetProxy = D3A315942863ADCB00E6B966 /* PBXContainerItemProxy */;
+		};
+		D3DA268128CA5FEB0078F44D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D39302CF283FDFD700BBD5F4 /* ipadcats */;
+			targetProxy = D3DA268028CA5FEB0078F44D /* PBXContainerItemProxy */;
 		};
 		D3F2613228469FAF006169A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -920,6 +946,7 @@
 		D3A315972863ADCB00E6B966 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W24S2RJT7L;
@@ -930,12 +957,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ipadcats.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ipadcats";
 			};
 			name = Debug;
 		};
 		D3A315982863ADCB00E6B966 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W24S2RJT7L;
@@ -946,6 +975,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ipadcats.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ipadcats";
 			};
 			name = Release;
 		};
@@ -1063,6 +1093,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3DA267D28CA5DEA0078F44D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3DA267E28CA5DEA0078F44D /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3DA267D28CA5DEA0078F44D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D39302C8283FDFD700BBD5F4 /* Project object */;
 }
