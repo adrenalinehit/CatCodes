@@ -34,6 +34,8 @@ class FavouriteImageProvider {
             urlString="https://http.cat/\(fav?.code ?? 404).jpg"
         case .dog:
             urlString="https://http.dog/\(fav?.code ?? 404).jpg"
+        case .garden:
+            urlString="https://http.garden/\(fav?.code ?? 404).jpg"
         case .none:
             urlString="https://http.cat/404.jpg"
         }

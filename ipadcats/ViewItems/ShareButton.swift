@@ -33,6 +33,10 @@ struct ShareButton: View {
             guard let urlShare = URL(string: "https://http.dog/\(statusCode).jpg") else { return }
             let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
             UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        case .garden:
+            guard let urlShare = URL(string: "https://http.garden/\(statusCode).jpg") else { return }
+            let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
         }
     }
 }

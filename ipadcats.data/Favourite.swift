@@ -37,4 +37,5 @@ enum AnimalType: String, CaseIterable, Identifiable, Codable {
 
     case cat = "Cats"
     case dog = "Dogs"
+    case garden = "Gardens"
 }

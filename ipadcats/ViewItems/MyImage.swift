@@ -28,6 +28,8 @@ struct MyImage: View {
             return "https://http.cat/\(statusCode).jpg"
         case .dog:
             return "https://http.dog/\(statusCode).jpg"
+        case .garden:
+            return "https://http.garden/\(statusCode).jpg"
         }
     }
 }

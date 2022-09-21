@@ -15,6 +15,7 @@ struct AnimalSwitcher: View {
         Picker("Animal Type", selection: $appPrefs.animalPreference) {
             Text("Cats").tag(AnimalType.cat)
             Text("Dogs").tag(AnimalType.dog)
+            Text("Gardens").tag(AnimalType.garden)
         }.pickerStyle(.segmented)
     }
 }
