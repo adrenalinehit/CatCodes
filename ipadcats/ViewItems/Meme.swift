@@ -29,7 +29,9 @@ struct Meme: View {
                 FavouriteButton(appPrefs: _appPrefs, statusCode: statusCode, animalType: animalType)
             }.padding()
         }
-        .navigationTitle(Text("Meme"))
+        .navigationTitle(
+            Text("HTTP \(statusCode)")
+        )
 
     }
 }
