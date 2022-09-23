@@ -14,7 +14,9 @@ struct SidebarView: View {
     var body: some View {
         NavigationView {
             List {
-
+                
+                AnimalSwitcher(appPrefs: _appPrefs)
+                
                 NavigationLink(destination: AllHttpCodes()) {
                     Label("All HTTP Status Codes", systemImage: "list.bullet.rectangle")
                 }
@@ -23,19 +25,22 @@ struct SidebarView: View {
                     Label("My Favourites", systemImage: "list.bullet.rectangle")
                 }
 
+                NavigationLink(destination: GridView()) {
+                    Label("Random Selection", systemImage: "list.bullet.rectangle")
+                }
+                
                 NavigationLink(destination: RandomCode()) {
                     Label("Random Status Code", systemImage: "shuffle")
                 }
-
-                AnimalSwitcher(appPrefs: _appPrefs)
 
             }
 
             .listStyle(SidebarListStyle())
             .navigationTitle("HTTP Codes")
 
-            MyFavourites()
-            // RandomCode()
+            GridView()
+            //MyFavourites()
+            //RandomCode()
         }
 
     }
