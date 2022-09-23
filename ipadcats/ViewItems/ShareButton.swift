@@ -26,7 +26,7 @@ struct ShareButton: View {
 
         switch animalType {
         case .cat:
-            guard let urlShare = URL(string: "https://http.cat/\(statusCode).jpg") else { return }
+            guard let urlShare = URL(string: "https://httpcats.com/\(statusCode).jpg") else { return }
             let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
             UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
         case .dog:

@@ -25,7 +25,7 @@ struct MyImage: View {
     func imageURL() -> String {
         switch animalType {
         case .cat:
-            return "https://http.cat/\(statusCode).jpg"
+            return "https://httpcats.com/\(statusCode).jpg"
         case .dog:
             return "https://http.dog/\(statusCode).jpg"
         case .garden:
