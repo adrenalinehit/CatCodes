@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ipadcats_data
 
 struct RandomCode: View {
     @State private var code: HTTPStatusCode = HTTPStatusCode.notFound

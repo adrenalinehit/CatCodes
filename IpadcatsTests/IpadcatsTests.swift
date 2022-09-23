@@ -24,5 +24,9 @@ final class IpadcatsTests: XCTestCase {
 
         XCTAssertNotEqual(fav1, fav2)
     }
+    
+    func testEnumNameExtension() throws {
+        XCTAssertEqual("teapot", HTTPStatusCode.teapot.name)
+    }
 
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ipadcats_data
 
 struct AllHttpCodes: View {
 
@@ -39,7 +40,7 @@ struct AllHttpCodes: View {
         if searchText.isEmpty {
             return all
         } else {
-            return all.filter { $0.rawValue == Int(searchText) }
+            return all.filter { $0.rawValue == Int(searchText) || $0.name.lowercased().contains(searchText.lowercased()) }
         }
     }
 }
