@@ -13,7 +13,5 @@
 		<key>UILaunchScreen</key>
 		<dict/>
 	</dict>
-	<key>UIStatusBarStyle</key>
-	<string></string>
 </dict>
 </plist>

@@ -185,6 +185,8 @@ enum HTTPStatusCode: Int, CaseIterable, Identifiable {
     case notExtended = 510
 
     case networkAuthenticationRequired = 511
+    
+    case requestDenied = 999
 
 }
 
