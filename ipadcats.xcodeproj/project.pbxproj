@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B486C6728DF760300A2B16C /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B486C6628DF760300A2B16C /* Credits.swift */; };
 		9BEA79F228DE2CE8006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
 		9BEA79F328DE2D78006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
 		9BEA79F428DE2D78006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
@@ -126,6 +127,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B486C6628DF760300A2B16C /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		9BEA79F528DE506D006826FA /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		D33A650B2847F1A700A307FA /* ipadcats_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ipadcats_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33A650D2847F1A700A307FA /* ipadcats_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipadcats_data.h; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				D3B623F5284546370084930E /* AllHttpCodes.swift */,
 				D39302E3283FE75B00BBD5F4 /* SidebarView.swift */,
 				9BEA79F528DE506D006826FA /* GridView.swift */,
+				9B486C6628DF760300A2B16C /* Credits.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				D39302E2283FDFF900BBD5F4 /* MyImage.swift in Sources */,
 				D3E872372864E93F001C5C06 /* AnimalSwitcher.swift in Sources */,
 				D3E8723D2864F5D5001C5C06 /* FavouriteMeme.swift in Sources */,
+				9B486C6728DF760300A2B16C /* Credits.swift in Sources */,
 				D33A65332848068500A307FA /* Favourite.swift in Sources */,
 				9BEA79F628DE506D006826FA /* GridView.swift in Sources */,
 				D3B623F6284546370084930E /* AllHttpCodes.swift in Sources */,
@@ -691,6 +695,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -722,6 +727,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

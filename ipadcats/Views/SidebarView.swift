@@ -14,35 +14,68 @@ struct SidebarView: View {
     var body: some View {
         NavigationView {
             List {
-                
-                AnimalSwitcher(appPrefs: _appPrefs)
-                
-                NavigationLink(destination: AllHttpCodes()) {
-                    Label("All HTTP Status Codes", systemImage: "list.bullet.rectangle")
-                }
-
-                NavigationLink(destination: MyFavourites()) {
-                    Label("My Favourites", systemImage: "list.bullet.rectangle")
-                }
-
-                NavigationLink(destination: GridView()) {
-                    Label("Random Selection", systemImage: "list.bullet.rectangle")
+                Section {
+                    AnimalSwitcher(appPrefs: _appPrefs)
+                } header: {
+                    Text("Meme Type")
                 }
                 
-                NavigationLink(destination: RandomCode()) {
-                    Label("Random Status Code", systemImage: "shuffle")
-                }
+                Section {
+                    NavigationLink(destination: AllHttpCodes()) {
+                        Label("List all HTTP Status Codes", systemImage: "list.bullet.rectangle")
+                    }
 
+                    NavigationLink(destination: MyFavourites()) {
+                        Label("My Favourites", systemImage: "list.star")
+                    }
+                } header: {
+                    Text("My HTTP Codes")
+                }
+                
+                Section {
+                    NavigationLink(destination: RandomCode()) {
+                        Label("Pick 1 Random Code", systemImage: "shuffle")
+                    }
+                    
+                    NavigationLink(destination: GridView()) {
+                        Label("Show 25 Random Codes", systemImage: "list.bullet.rectangle")
+                    }
+                } header: {
+                    Text("Random Picks")
+                }
+                
+                Section {
+                    NavigationLink(destination: Credits()) {
+                        Label("Images", systemImage: "scroll.fill" )
+                    }
+                } header: {
+                    Text("Credits")
+                }
+                
             }
-
             .listStyle(SidebarListStyle())
             .navigationTitle("HTTP Codes")
 
-            GridView()
-            //MyFavourites()
-            //RandomCode()
+            VStack{
+                MyFavourites()
+                GridView()
+            }
         }
+    }
+}
 
+struct MyNavLink: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title3)
+            .padding()
+            .background(Capsule().stroke(lineWidth: 2))
+    }
+}
+
+extension View {
+    func myNavLink() -> some View {
+        modifier(MyNavLink())
     }
 }
 

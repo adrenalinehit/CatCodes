@@ -31,7 +31,7 @@ struct MyFavourites: View {
                         }
                     }
                     Spacer()
-                }.navigationTitle("My Favourites")
+                }.navigationBarTitle("My Favourites")
             }
         }
     }
