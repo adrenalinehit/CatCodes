@@ -39,6 +39,7 @@ struct RandomCode: View {
                 }
             }
         }
+
     }
 
     func newRandom() {

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import ipadcats_data
 
 enum FavouriteResponse {
     case success(image: UIImage)

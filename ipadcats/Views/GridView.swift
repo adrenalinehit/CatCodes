@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct GridView: View {
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
-    
+
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
+
     var body: some View {
         ScrollView {
                 LazyVGrid(columns: gridItemLayout, spacing: 20) {

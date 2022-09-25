@@ -12,14 +12,14 @@ struct SidebarView: View {
     @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Section {
                     AnimalSwitcher(appPrefs: _appPrefs)
                 } header: {
                     Text("Meme Type")
                 }
-                
+
                 Section {
                     NavigationLink(destination: AllHttpCodes()) {
                         Label("List all HTTP Status Codes", systemImage: "list.bullet.rectangle")
@@ -31,19 +31,19 @@ struct SidebarView: View {
                 } header: {
                     Text("My HTTP Codes")
                 }
-                
+
                 Section {
                     NavigationLink(destination: RandomCode()) {
                         Label("Pick 1 Random Code", systemImage: "shuffle")
                     }
-                    
+
                     NavigationLink(destination: GridView()) {
                         Label("Show 25 Random Codes", systemImage: "list.bullet.rectangle")
                     }
                 } header: {
                     Text("Random Picks")
                 }
-                
+
                 Section {
                     NavigationLink(destination: Credits()) {
                         Label("Images", systemImage: "scroll.fill" )
@@ -51,15 +51,15 @@ struct SidebarView: View {
                 } header: {
                     Text("Credits")
                 }
-                
+
             }
             .listStyle(SidebarListStyle())
             .navigationTitle("HTTP Codes")
 
-            VStack{
+            /*VStack{
                 MyFavourites()
                 GridView()
-            }
+            }*/
         }
     }
 }

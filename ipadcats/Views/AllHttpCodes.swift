@@ -19,17 +19,19 @@ struct AllHttpCodes: View {
     var body: some View {
         List {
             ForEach(HTTPStatusCode.ResponseType.allCases) { rType in
-                Text(rType.rawValue).font(.title2)
 
-                ForEach(searchResults.filter {$0.responseType == rType}) { code in
-                    NavigationLink(destination: Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)) {
-                        Text("HTTP Status Code: \(code.rawValue)")
-                            .font(.body)
-                            .padding()
+                Section(header: Text(rType.rawValue).font(.title2)) {
+
+                    ForEach(searchResults.filter {$0.responseType == rType}) { code in
+                        NavigationLink(destination: Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)) {
+                            Text("HTTP Status Code: \(code.rawValue)")
+                                .font(.body)
+                        }
                     }
                 }
             }
         }
+        .listStyle(InsetGroupedListStyle())
         .searchable(text: $searchText)
         .navigationBarTitle(Text("All statuses"))
     }

@@ -25,8 +25,8 @@ final class SnapshotTester: XCTestCase {
 
         func testSidebarSnapshotTest() throws {
             // UI tests must launch the application that they test.
-           //let app = XCUIApplication()
-           //app.launch()
+           // let app = XCUIApplication()
+           // app.launch()
 
             let appView = SidebarView()
                 .environmentObject({ () -> AppPreferences in
@@ -34,7 +34,7 @@ final class SnapshotTester: XCTestCase {
                     envObj.animalPreference = .cat
                     return envObj
                 }())
-            
+
             let view: UIView = UIHostingController(rootView: appView).view
 
             assertSnapshot(
@@ -42,6 +42,3 @@ final class SnapshotTester: XCTestCase {
               as: .image(size: view.intrinsicContentSize))
         }
     }
-
-
-

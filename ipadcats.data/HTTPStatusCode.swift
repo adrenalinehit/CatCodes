@@ -61,7 +61,7 @@ enum HTTPStatusCode: Int, CaseIterable, Identifiable {
     case processing = 102
 
     case ok = 200
-
+    
     case created = 201
 
     case accepted = 202

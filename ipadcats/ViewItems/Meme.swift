@@ -6,33 +6,25 @@
 //
 
 import SwiftUI
-import WidgetKit
 
 struct Meme: View {
-
+    
     @EnvironmentObject var appPrefs: AppPreferences
-
+    
     var statusCode = 404
     var animalType = AnimalType.cat
-
+    
     var body: some View {
-
-        VStack {
-
-            AnimalSwitcher(appPrefs: _appPrefs).padding()
-
-            MyImage(animalType: animalType, statusCode: statusCode)
-                .padding()
-
-            HStack {
-                ShareButton(statusCode: statusCode, animalType: animalType)
-                FavouriteButton(appPrefs: _appPrefs, statusCode: statusCode, animalType: animalType)
-            }.padding()
+        AnimalSwitcher(appPrefs: _appPrefs).padding(.all)
+        MyImage(animalType: animalType, statusCode: statusCode).padding(.all)
+        
+        HStack {
+            ShareButton(statusCode: statusCode, animalType: animalType)
+            FavouriteButton(appPrefs: _appPrefs, statusCode: statusCode, animalType: animalType)
         }
         .navigationBarTitle(
             Text("HTTP \(statusCode)")
         )
-
     }
 }
 
