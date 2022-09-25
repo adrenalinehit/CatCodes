@@ -13,31 +13,29 @@ struct ShareButton: View {
     var animalType = AnimalType.cat
 
     var body: some View {
-        Button {
-            shareSheet()
-        } label: {
-            Label("Share", systemImage: "square.and.arrow.up")
+        let link = shareLink()
+
+        VStack {
+            ShareLink(
+                item: link,
+                message: Text("I've just laughed at this Http Status code meme! Check it out!")
+            )
         }
     }
 
-    // todo: ugly, needs refactoring
-    func shareSheet() {
-        let shareText = "I've just laughed at this Http Status code meme! Check it out!"
-
+    func shareLink() -> URL {
+        var urlShare: URL
+        
         switch animalType {
         case .cat:
-            guard let urlShare = URL(string: "https://httpcats.com/\(statusCode).jpg") else { return }
-            let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
-            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+            urlShare = URL(string: "https://httpcats.com/\(statusCode).jpg")!
         case .dog:
-            guard let urlShare = URL(string: "https://http.dog/\(statusCode).jpg") else { return }
-            let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
-            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+            urlShare = URL(string: "https://http.dog/\(statusCode).jpg")!
         case .garden:
-            guard let urlShare = URL(string: "https://http.garden/\(statusCode).jpg") else { return }
-            let activityVC = UIActivityViewController(activityItems: [shareText, urlShare], applicationActivities: nil)
-            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+            urlShare = URL(string: "https://http.garden/\(statusCode).jpg")!
         }
+        
+        return urlShare
     }
 }
 
