@@ -18,7 +18,7 @@ struct GridView: View {
                 LazyVGrid(columns: gridItemLayout, spacing: 20) {
                     ForEach((0...25), id: \.self) {_ in
 
-                        MyImage(animalType: appPrefs.animalPreference, statusCode: HTTPStatusCode.allCases.randomElement()!.rawValue)
+                        MyImage(animalType: appPrefs.animalPreference, statusCode: HTTPStatusCode.allCases.randomElement()!.rawValue).frame(height: 200)
                     }
                 }
             }

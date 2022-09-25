@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9B486C6728DF760300A2B16C /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B486C6628DF760300A2B16C /* Credits.swift */; };
-		9B486C6A28E0F34500A2B16C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C6928E0F34500A2B16C /* Nuke */; };
+		9B486C7028E0F74D00A2B16C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C6F28E0F74D00A2B16C /* Nuke */; };
+		9B486C7228E0F74D00A2B16C /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C7128E0F74D00A2B16C /* NukeExtensions */; };
+		9B486C7428E0F74D00A2B16C /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C7328E0F74D00A2B16C /* NukeUI */; };
 		9BEA79F228DE2CE8006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
 		9BEA79F328DE2D78006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
 		9BEA79F428DE2D78006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
@@ -183,7 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33A65202847F50700A307FA /* ipadcats_data.framework in Frameworks */,
-				9B486C6A28E0F34500A2B16C /* Nuke in Frameworks */,
+				9B486C7028E0F74D00A2B16C /* Nuke in Frameworks */,
+				9B486C7228E0F74D00A2B16C /* NukeExtensions in Frameworks */,
+				9B486C7428E0F74D00A2B16C /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +406,9 @@
 			);
 			name = ipadcats;
 			packageProductDependencies = (
-				9B486C6928E0F34500A2B16C /* Nuke */,
+				9B486C6F28E0F74D00A2B16C /* Nuke */,
+				9B486C7128E0F74D00A2B16C /* NukeExtensions */,
+				9B486C7328E0F74D00A2B16C /* NukeUI */,
 			);
 			productName = ipadcats;
 			productReference = D39302D0283FDFD700BBD5F4 /* ipadcats.app */;
@@ -506,7 +512,7 @@
 			mainGroup = D39302C7283FDFD700BBD5F4;
 			packageReferences = (
 				D3DA267D28CA5DEA0078F44D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
-				9B486C6828E0F34500A2B16C /* XCRemoteSwiftPackageReference "Nuke" */,
+				9B486C6E28E0F74D00A2B16C /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = D39302D1283FDFD700BBD5F4 /* Products */;
 			projectDirPath = "";
@@ -1141,12 +1147,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9B486C6828E0F34500A2B16C /* XCRemoteSwiftPackageReference "Nuke" */ = {
+		9B486C6E28E0F74D00A2B16C /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				kind = exactVersion;
+				version = 11.3.0;
 			};
 		};
 		D3DA267D28CA5DEA0078F44D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
@@ -1160,10 +1166,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9B486C6928E0F34500A2B16C /* Nuke */ = {
+		9B486C6F28E0F74D00A2B16C /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9B486C6828E0F34500A2B16C /* XCRemoteSwiftPackageReference "Nuke" */;
+			package = 9B486C6E28E0F74D00A2B16C /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		9B486C7128E0F74D00A2B16C /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B486C6E28E0F74D00A2B16C /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		9B486C7328E0F74D00A2B16C /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B486C6E28E0F74D00A2B16C /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
 		};
 		D3DA267E28CA5DEA0078F44D /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;

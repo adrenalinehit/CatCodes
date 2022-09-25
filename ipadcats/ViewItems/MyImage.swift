@@ -4,7 +4,7 @@
 //
 //  Created by Nick Payne on 26/05/2022.
 //
-
+import NukeUI
 import SwiftUI
 
 struct MyImage: View {
@@ -13,13 +13,7 @@ struct MyImage: View {
     var statusCode: Int = 404
 
     var body: some View {
-        AsyncImage(url: URL(string: imageURL())) { image in
-            image
-                .resizable()
-                .scaledToFit()
-        } placeholder: {
-            ProgressView()
-        }
+        LazyImage(url: URL(string: imageURL()), resizingMode: .aspectFit)
     }
 
     func imageURL() -> String {

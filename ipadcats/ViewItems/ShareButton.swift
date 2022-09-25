@@ -25,7 +25,7 @@ struct ShareButton: View {
 
     func shareLink() -> URL {
         var urlShare: URL
-        
+
         switch animalType {
         case .cat:
             urlShare = URL(string: "https://httpcats.com/\(statusCode).jpg")!
@@ -34,7 +34,7 @@ struct ShareButton: View {
         case .garden:
             urlShare = URL(string: "https://http.garden/\(statusCode).jpg")!
         }
-        
+
         return urlShare
     }
 }
