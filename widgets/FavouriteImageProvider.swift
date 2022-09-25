@@ -58,8 +58,19 @@ class FavouriteImageProvider {
             return
         }
 
-        let image = UIImage(data: content)!
-        let response = FavouriteResponse.success(image: image)
+        let image = UIImage(data: content)!.resized(toWidth: 800)
+        let response = FavouriteResponse.success(image: image!)
         completion?(response)
     }
+}
+
+extension UIImage {
+  func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+    let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+    let format = imageRendererFormat
+    format.opaque = isOpaque
+    return UIGraphicsImageRenderer(size: canvas, format: format).image {
+      _ in draw(in: CGRect(origin: .zero, size: canvas))
+    }
+  }
 }

@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct Meme: View {
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
-    
+
     var statusCode = 404
     var animalType = AnimalType.cat
-    
+
     var body: some View {
         AnimalSwitcher(appPrefs: _appPrefs).padding(.all)
         MyImage(animalType: animalType, statusCode: statusCode).padding(.all)
-        
+
         HStack {
             ShareButton(statusCode: statusCode, animalType: animalType)
             FavouriteButton(appPrefs: _appPrefs, statusCode: statusCode, animalType: animalType)
