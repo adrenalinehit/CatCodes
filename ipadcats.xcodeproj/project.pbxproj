@@ -314,6 +314,7 @@
 		D3B623ED284542810084930E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D3B623EF2845429A0084930E /* Meme.swift */,
 				D3B623F1284543580084930E /* MyFavourites.swift */,
 				D3B623F32845461D0084930E /* RandomCode.swift */,
 				D3B623F5284546370084930E /* AllHttpCodes.swift */,
@@ -328,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				D39302E1283FDFF900BBD5F4 /* MyImage.swift */,
-				D3B623EF2845429A0084930E /* Meme.swift */,
 				D3E872362864E93F001C5C06 /* AnimalSwitcher.swift */,
 				D3E872382864EEDB001C5C06 /* ShareButton.swift */,
 				D3E8723A2864F09F001C5C06 /* FavouriteButton.swift */,
