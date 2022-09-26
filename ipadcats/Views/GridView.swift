@@ -33,7 +33,7 @@ struct GridView: View {
     
     func pickRandoms() {
         var uniques = Set<HTTPStatusCode>()
-        while (uniques.count < 26) {
+        while (uniques.count < 25) {
             uniques.insert(HTTPStatusCode.allCases.randomElement()!)
         }
         randoms = Array(uniques)
