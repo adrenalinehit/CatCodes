@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1F285228E1CEB6009A5D86 /* ModifierCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */; };
 		9B486C6728DF760300A2B16C /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B486C6628DF760300A2B16C /* Credits.swift */; };
 		9B486C7028E0F74D00A2B16C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C6F28E0F74D00A2B16C /* Nuke */; };
 		9B486C7228E0F74D00A2B16C /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C7128E0F74D00A2B16C /* NukeExtensions */; };
@@ -130,6 +131,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierCollections.swift; sourceTree = "<group>"; };
 		9B486C6628DF760300A2B16C /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		9BEA79F528DE506D006826FA /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		D33A650B2847F1A700A307FA /* ipadcats_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ipadcats_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B1F285028E1CE8F009A5D86 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		D33A650C2847F1A700A307FA /* ipadcats.data */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +271,7 @@
 			children = (
 				D3F261382846A608006169A8 /* ipadcats.entitlements */,
 				D39302E9283FF2CC00BBD5F4 /* Info.plist */,
+				9B1F285028E1CE8F009A5D86 /* ViewModifiers */,
 				D3B623F72845466D0084930E /* Data */,
 				D3B623EE284542890084930E /* ViewItems */,
 				D3B623ED284542810084930E /* Views */,
@@ -605,6 +616,7 @@
 			files = (
 				9BEA79F428DE2D78006826FA /* HTTPStatusCode.swift in Sources */,
 				D3B623F42845461D0084930E /* RandomCode.swift in Sources */,
+				9B1F285228E1CEB6009A5D86 /* ModifierCollections.swift in Sources */,
 				D39302D6283FDFD700BBD5F4 /* ContentView.swift in Sources */,
 				D39302E4283FE75B00BBD5F4 /* SidebarView.swift in Sources */,
 				D3B623F02845429A0084930E /* Meme.swift in Sources */,

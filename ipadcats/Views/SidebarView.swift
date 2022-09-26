@@ -55,27 +55,7 @@ struct SidebarView: View {
             }
             .listStyle(SidebarListStyle())
             .navigationTitle("HTTP Codes")
-
-            /*VStack{
-                MyFavourites()
-                GridView()
-            }*/
         }
-    }
-}
-
-struct MyNavLink: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.title3)
-            .padding()
-            .background(Capsule().stroke(lineWidth: 2))
-    }
-}
-
-extension View {
-    func myNavLink() -> some View {
-        modifier(MyNavLink())
     }
 }
 
