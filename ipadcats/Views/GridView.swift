@@ -17,14 +17,14 @@ struct GridView: View {
 
     var body: some View {
         ScrollView {
-                LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                    ForEach(randoms.sorted(by: { return $0.rawValue < $1.rawValue })) { code in
+            LazyVGrid(columns: gridItemLayout, spacing: 20) {
+                ForEach(randoms.sorted(by: { return $0.rawValue < $1.rawValue })) { code in
 
-                        NavigationLink(destination: Meme(appPrefs: _appPrefs, statusCode: code.rawValue, animalType: appPrefs.animalPreference)) {
-                            MyImage(animalType: appPrefs.animalPreference, statusCode: code.rawValue).frame(height: 200)
-                        }
+                    NavigationLink(destination: Meme(appPrefs: _appPrefs, statusCode: code.rawValue, animalType: appPrefs.animalPreference)) {
+                        MyImage(animalType: appPrefs.animalPreference, statusCode: code.rawValue).frame(height: 200)
                     }
                 }
+            }
         }
         .accessibilityLabel("gridScroll")
         .onAppear {

@@ -8,10 +8,10 @@ import NukeUI
 import SwiftUI
 
 struct MyImage: View {
-    
+
     var animalType: AnimalType = .cat
     var statusCode: Int = 404
-    
+
     var body: some View {
         LazyImage(url: URL(string: imageURL())) { state in
             if let image = state.image {
@@ -25,7 +25,7 @@ struct MyImage: View {
             }
         }
     }
-    
+
     func imageURL() -> String {
         switch animalType {
         case .cat:

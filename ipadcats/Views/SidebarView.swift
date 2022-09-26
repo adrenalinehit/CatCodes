@@ -51,7 +51,6 @@ struct SidebarView: View {
                 } header: {
                     Text("Credits")
                 }
-
             }
             .listStyle(SidebarListStyle())
             .navigationTitle("HTTP Codes")
