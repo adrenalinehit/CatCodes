@@ -22,12 +22,20 @@ final class IpadcatsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+    func testCorrectNumberOfImagesLoaded() throws {
+        // is there a better way to do this?
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let app = XCUIApplication()
+            app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+            app.buttons["gridView"].tap()
+
+            // this is the bit that only works when using an iPad to run tests
+            app.scrollViews["gridScroll"].scroll(byDeltaX: 0, deltaY: 100)
+
+            XCTAssertTrue(app.images.element.waitForExistence(timeout: 5))
+            XCTAssertEqual(app.images.count, 25)
+        }
     }
 
     func testLaunchPerformance() throws {

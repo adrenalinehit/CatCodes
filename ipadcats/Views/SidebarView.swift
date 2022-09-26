@@ -39,7 +39,7 @@ struct SidebarView: View {
 
                     NavigationLink(destination: GridView()) {
                         Label("Show 25 Random Codes", systemImage: "list.bullet.rectangle")
-                    }
+                    }.accessibilityLabel("gridView")
                 } header: {
                     Text("Random Picks")
                 }
