@@ -38,4 +38,19 @@ enum AnimalType: String, CaseIterable, Identifiable, Codable {
     case cat = "Cats"
     case dog = "Dogs"
     case garden = "Gardens"
+
+    func shareLink(statusCode: Int) -> URL {
+        var urlShare: URL
+
+        switch self {
+        case .cat:
+            urlShare = URL(string: "https://httpcats.com/\(statusCode).jpg")!
+        case .dog:
+            urlShare = URL(string: "https://http.dog/\(statusCode).jpg")!
+        case .garden:
+            urlShare = URL(string: "https://http.garden/\(statusCode).jpg")!
+        }
+
+        return urlShare
+    }
 }

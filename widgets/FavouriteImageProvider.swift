@@ -25,28 +25,18 @@ class FavouriteImageProvider {
             }
         }
 
-        var urlString = ""
-        let fav = codeFavourites.randomElement()
-
-        switch fav?.animal {
-        case .cat:
-            urlString="https://httpcats.com/\(fav?.code ?? 404).jpg"
-        case .dog:
-            urlString="https://http.dog/\(fav?.code ?? 404).jpg"
-        case .garden:
-            urlString="https://http.garden/\(fav?.code ?? 404).jpg"
-        case .none:
-            urlString="https://httpcats.com/404.jpg"
+        if !codeFavourites.isEmpty {
+            let fav = codeFavourites.randomElement()
+            
+            let url = fav?.animal.shareLink(statusCode: fav?.code ?? 404)
+            let urlRequest = URLRequest(url: url!)
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
+                parseImageFromResponse(data: data, urlResponse: urlResponse, error: error, completion: completion)
+            }
+            
+            task.resume()
         }
-
-        let url = URL(string: urlString)!
-        let urlRequest = URLRequest(url: url)
-
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
-            parseImageFromResponse(data: data, urlResponse: urlResponse, error: error, completion: completion)
-        }
-
-        task.resume()
     }
 
     static func parseImageFromResponse(data: Data?, urlResponse: URLResponse?, error: Error?, completion: ((FavouriteResponse) -> Void)?) {
