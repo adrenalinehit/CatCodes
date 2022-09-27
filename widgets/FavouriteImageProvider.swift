@@ -27,14 +27,14 @@ class FavouriteImageProvider {
 
         if !codeFavourites.isEmpty {
             let fav = codeFavourites.randomElement()
-            
+
             let url = fav?.animal.shareLink(statusCode: fav?.code ?? 404)
             let urlRequest = URLRequest(url: url!)
-            
+
             let task = URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
                 parseImageFromResponse(data: data, urlResponse: urlResponse, error: error, completion: completion)
             }
-            
+
             task.resume()
         }
     }

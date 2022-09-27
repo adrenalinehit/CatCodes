@@ -9,16 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @StateObject var appPrefs = AppPreferences()
+    @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
-        SidebarView()
-            .environmentObject(appPrefs)
+        NavigationSplitView {
+            SidebarView().environmentObject(appPrefs)
+        } detail: {
+            MyFavourites().environmentObject(appPrefs)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject({ () -> AppPreferences in
+            let envObj = AppPreferences()
+            envObj.animalPreference = .cat
+            return envObj
+        }() )
     }
 }

@@ -16,11 +16,11 @@ struct Meme: View {
 
     var body: some View {
         AnimalSwitcher(appPrefs: _appPrefs).padding(.all)
-        MyImage(animalType: animalType, statusCode: statusCode).padding(.all)
+        MyImage(animalType: appPrefs.animalPreference, statusCode: statusCode).padding(.all)
 
         HStack {
-            ShareButton(statusCode: statusCode, animalType: animalType)
-            FavouriteButton(appPrefs: _appPrefs, statusCode: statusCode, animalType: animalType)
+            ShareButton(statusCode: statusCode, animalType: appPrefs.animalPreference)
+            FavouriteButton(appPrefs: _appPrefs, statusCode: statusCode, animalType: appPrefs.animalPreference)
         }
         .navigationBarTitle(
             Text("HTTP \(statusCode)")

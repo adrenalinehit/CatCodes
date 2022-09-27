@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct IpadcatsApp: App {
 
+    @StateObject var appPrefs = AppPreferences()
+
     init() {
         ImagePipeline {
             $0.dataCache = try? DataCache(name: "uk.co.enyapkcin.ipadcats.datacache")
@@ -19,7 +21,7 @@ struct IpadcatsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(appPrefs)
         }
     }
 }

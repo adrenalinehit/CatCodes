@@ -15,17 +15,17 @@ struct SidebarView: View {
         NavigationStack {
             List {
                 Section {
-                    AnimalSwitcher(appPrefs: _appPrefs)
+                    AnimalSwitcher().environmentObject(appPrefs)
                 } header: {
                     Text("Meme Type")
                 }
 
                 Section {
-                    NavigationLink(destination: AllHttpCodes()) {
+                    NavigationLink(destination: AllHttpCodes().environmentObject(appPrefs)) {
                         Label("List all HTTP Status Codes", systemImage: "list.bullet.rectangle")
                     }
 
-                    NavigationLink(destination: MyFavourites()) {
+                    NavigationLink(destination: MyFavourites().environmentObject(appPrefs)) {
                         Label("My Favourites", systemImage: "list.star")
                     }
                 } header: {
@@ -33,11 +33,11 @@ struct SidebarView: View {
                 }
 
                 Section {
-                    NavigationLink(destination: RandomCode()) {
+                    NavigationLink(destination: RandomCode().environmentObject(appPrefs)) {
                         Label("Pick 1 Random Code", systemImage: "shuffle")
                     }
 
-                    NavigationLink(destination: GridView()) {
+                    NavigationLink(destination: GridView().environmentObject(appPrefs)) {
                         Label("Show 25 Random Codes", systemImage: "list.bullet.rectangle")
                     }.accessibilityLabel("gridView")
                 } header: {
