@@ -23,7 +23,7 @@ I'd also love to work with a designer to refresh the assets, both in app and in 
 
 ## CI/CD
 
-Each change to the main branch will result in XCode Cloud running a testflight build - super helpful!
+Each change to the main branch will result in Xcode Cloud running a testflight build - super helpful!
 
 ## Acknowledgements
 
