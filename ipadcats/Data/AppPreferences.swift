@@ -12,14 +12,32 @@ class AppPreferences: ObservableObject {
     @Published var animalPreference = AnimalType.cat
     @Published var codeFavourites: Set<Favourite> = []
 
+    private let ukvs = NSUbiquitousKeyValueStore.default
+
     init() {
-        if let data = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
-            if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
-                codeFavourites = decoded
-                return
+
+        ukvs.synchronize()
+
+        if ukvs.bool(forKey: "backedup") == false {
+            print("attempting one time back up of your favourites")
+            if let existing = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
+                if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: existing) {
+                    codeFavourites = decoded
+                    self.save(favs: decoded)
+                    return
+                }
+            }
+            ukvs.set(true, forKey: "backedup")
+            ukvs.synchronize()
+        } else {
+            if let data = ukvs.data(forKey: "Favourites") {
+                print("init: \(data)")
+                if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
+                    codeFavourites = decoded
+                    return
+                }
             }
         }
-
         codeFavourites = []
     }
 }
@@ -46,7 +64,9 @@ extension AppPreferences {
 
     func save(favs: Set<Favourite>) {
         if let encoded = try? JSONEncoder().encode(favs) {
-            UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.set(encoded, forKey: "Favourites")
+            print("encoded: \(encoded)")
+            ukvs.set(encoded, forKey: "Favourites")
+            ukvs.synchronize()
         }
     }
 

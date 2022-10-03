@@ -19,7 +19,11 @@ class FavouriteImageProvider {
 
         var codeFavourites: Set<Favourite> = []
 
-        if let data = UserDefaults(suiteName: "group.uk.co.enyapkcin.ipadcats")!.data(forKey: "Favourites") {
+        let ukvs = NSUbiquitousKeyValueStore.default
+        ukvs.synchronize()
+
+        if let data = ukvs.data(forKey: "Favourites") {
+            print("init: \(data)")
             if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: data) {
                 codeFavourites = decoded
             }
@@ -55,12 +59,12 @@ class FavouriteImageProvider {
 }
 
 extension UIImage {
-  func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
-    let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
-    let format = imageRendererFormat
-    format.opaque = isOpaque
-    return UIGraphicsImageRenderer(size: canvas, format: format).image {
-      _ in draw(in: CGRect(origin: .zero, size: canvas))
+    func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        return UIGraphicsImageRenderer(size: canvas, format: format).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
     }
-  }
 }

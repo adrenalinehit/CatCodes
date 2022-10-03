@@ -37,6 +37,13 @@ struct Credits: View {
                 } label: {
                     Label("Clear image caches", systemImage: "trash")
                 }.myCreditsLink()
+
+                Spacer()
+
+                HStack {
+                    Spacer()
+                    Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
+                }
             }
 
         }.navigationBarTitle(Text("Credits"))
@@ -46,6 +53,13 @@ struct Credits: View {
         try? Nuke.DataCache(name: "uk.co.enyapkcin.ipadcats.datacache").removeAll()
         Nuke.DataLoader.sharedUrlCache.removeAllCachedResponses()
     }
+}
+
+extension Bundle {
+    public var appBuild: String { getInfo("CFBundleVersion") }
+    public var appVersionLong: String { getInfo("CFBundleShortVersionString") }
+
+    fileprivate func getInfo(_ str: String) -> String { infoDictionary?[str] as? String ?? "⚠️" }
 }
 
 struct Credits_Previews: PreviewProvider {

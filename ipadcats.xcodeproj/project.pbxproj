@@ -133,6 +133,8 @@
 /* Begin PBXFileReference section */
 		9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierCollections.swift; sourceTree = "<group>"; };
 		9B486C6628DF760300A2B16C /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
+		9B9270FC28E7792600B63268 /* ipadcatsRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ipadcatsRelease.entitlements; sourceTree = "<group>"; };
+		9B92710028EB76A500B63268 /* widgetsExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetsExtensionRelease.entitlements; sourceTree = "<group>"; };
 		9BEA79F528DE506D006826FA /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		D33A650B2847F1A700A307FA /* ipadcats_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ipadcats_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33A650D2847F1A700A307FA /* ipadcats_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipadcats_data.h; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		D39302C7283FDFD700BBD5F4 = {
 			isa = PBXGroup;
 			children = (
+				9B92710028EB76A500B63268 /* widgetsExtensionRelease.entitlements */,
 				D3F261392846A647006169A8 /* widgetsExtension.entitlements */,
 				D39302D2283FDFD700BBD5F4 /* ipadcats */,
 				D3F2612B28469FAD006169A8 /* widgets */,
@@ -269,6 +272,7 @@
 		D39302D2283FDFD700BBD5F4 /* ipadcats */ = {
 			isa = PBXGroup;
 			children = (
+				9B9270FC28E7792600B63268 /* ipadcatsRelease.entitlements */,
 				D3F261382846A608006169A8 /* ipadcats.entitlements */,
 				D39302E9283FF2CC00BBD5F4 /* Info.plist */,
 				9B1F285028E1CE8F009A5D86 /* ViewModifiers */,
@@ -919,7 +923,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -938,7 +942,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = ipadcats/ipadcats.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ipadcats/ipadcatsRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ipadcats/Preview Content\"";
@@ -961,7 +965,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1064,7 +1068,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1079,7 +1083,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = widgetsExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = widgetsExtensionRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W24S2RJT7L;
@@ -1095,7 +1099,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
