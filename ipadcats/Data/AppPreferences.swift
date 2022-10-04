@@ -24,11 +24,11 @@ class AppPreferences: ObservableObject {
                 if let decoded = try? JSONDecoder().decode(Set<Favourite>.self, from: existing) {
                     codeFavourites = decoded
                     self.save(favs: decoded)
+                    ukvs.set(true, forKey: "backedup")
+                    ukvs.synchronize()
                     return
                 }
             }
-            ukvs.set(true, forKey: "backedup")
-            ukvs.synchronize()
         } else {
             if let data = ukvs.data(forKey: "Favourites") {
                 print("init: \(data)")
