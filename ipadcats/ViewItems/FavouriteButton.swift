@@ -14,12 +14,17 @@ struct FavouriteButton: View {
 
     var statusCode = 404
     var animalType = AnimalType.cat
-
+    var textLabel = true
+    
     var body: some View {
         Button {
             favouriteItem()
         } label: {
-            appPrefs.isFavourite(animal: animalType, code: statusCode) ? Label("Favourite", systemImage: "star.fill") : Label("Favourite", systemImage: "star")
+            if textLabel {
+                appPrefs.isFavourite(animal: animalType, code: statusCode) ? Label("Favourite", systemImage: "star.fill") : Label("Favourite", systemImage: "star")
+            } else {
+                appPrefs.isFavourite(animal: animalType, code: statusCode) ? Label("", systemImage: "star.fill") : Label("", systemImage: "star")
+            }
         }
     }
 
