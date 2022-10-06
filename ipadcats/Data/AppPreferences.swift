@@ -11,6 +11,7 @@ import ipadcats_data
 class AppPreferences: ObservableObject {
     @Published var animalPreference = AnimalType.cat
     @Published var codeFavourites: Set<Favourite> = []
+    @Published var favouriteCount = 0
 
     private let ukvs = NSUbiquitousKeyValueStore.default
 
@@ -58,6 +59,7 @@ extension AppPreferences {
         } else {
             codeFavourites.insert(favouriteItem)
             save(favs: codeFavourites)
+            favouriteCount += 1
         }
 
     }

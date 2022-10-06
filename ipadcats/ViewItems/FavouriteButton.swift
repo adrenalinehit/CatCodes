@@ -7,10 +7,13 @@
 
 import SwiftUI
 import WidgetKit
+import StoreKit
 
 struct FavouriteButton: View {
 
     @EnvironmentObject var appPrefs: AppPreferences
+    
+    @Environment(\.requestReview) var requestReview
 
     var statusCode = 404
     var animalType = AnimalType.cat
@@ -33,6 +36,9 @@ struct FavouriteButton: View {
         let impactMed = UIImpactFeedbackGenerator(style: .heavy)
         impactMed.impactOccurred()
         WidgetCenter.shared.reloadAllTimelines()
+        if appPrefs.favouriteCount % 3 == 0 {
+            requestReview()
+        }
     }
 
 }
