@@ -17,23 +17,25 @@ struct AllHttpCodes: View {
     var codes: [HTTPStatusCode] = HTTPStatusCode.allCases
 
     var body: some View {
-        List {
-            ForEach(HTTPStatusCode.ResponseType.allCases) { rType in
+        NavigationStack {
+            List {
+                ForEach(HTTPStatusCode.ResponseType.allCases) { rType in
 
-                Section(header: Text(rType.rawValue).font(.title2)) {
+                    Section(header: Text(rType.rawValue).font(.title2)) {
 
-                    ForEach(searchResults.filter {$0.responseType == rType}) { code in
-                        NavigationLink(destination: Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)) {
-                            Text("HTTP Status Code: \(code.rawValue)")
-                                .font(.body)
+                        ForEach(searchResults.filter {$0.responseType == rType}) { code in
+                            NavigationLink(destination: Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)) {
+                                Text("HTTP Status Code: \(code.rawValue)")
+                                    .font(.body)
+                            }
                         }
                     }
                 }
             }
+            .listStyle(InsetGroupedListStyle())
+            .searchable(text: $searchText)
+            .navigationBarTitle(Text("All statuses"))
         }
-        .listStyle(InsetGroupedListStyle())
-        .searchable(text: $searchText)
-        .navigationBarTitle(Text("All statuses"))
     }
 
     var searchResults: [HTTPStatusCode] {

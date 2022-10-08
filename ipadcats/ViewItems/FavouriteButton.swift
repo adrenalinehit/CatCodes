@@ -12,13 +12,13 @@ import StoreKit
 struct FavouriteButton: View {
 
     @EnvironmentObject var appPrefs: AppPreferences
-    
+
     @Environment(\.requestReview) var requestReview
 
     var statusCode = 404
     var animalType = AnimalType.cat
     var textLabel = true
-    
+
     var body: some View {
         Button {
             favouriteItem()
