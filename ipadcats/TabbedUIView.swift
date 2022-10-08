@@ -12,6 +12,7 @@ struct TabbedUIView: View {
     @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
+
         TabView {
             MyFavourites()
                 .tabItem {
@@ -27,7 +28,13 @@ struct TabbedUIView: View {
                 .tabItem {
                     Label("All", systemImage: "square.and.pencil")
                 }
+
+            RandomCode()
+                .tabItem {
+                    Label("Random", systemImage: "square.and.pencil")
+                }
         }
+
     }
 }
 

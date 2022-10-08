@@ -15,31 +15,33 @@ struct RandomCode: View {
     @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
-        VStack {
-            Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
-                .onAppear {
-                    newRandom()
-                }
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomBar) {
+        NavigationStack {
+            VStack {
+                Meme(statusCode: code.rawValue, animalType: appPrefs.animalPreference)
+                    .onAppear {
+                        newRandom()
+                    }
+            }
+            .navigationBarTitle(Text("HTTP \(code.rawValue)"))
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
 
-                Button {
-                    goBack()
-                } label: {
-                    Label("Previous...", systemImage: "chevron.left.2")
-                }.hiddenConditionally(isHidden: randoms.count <= 1)
+                    Button {
+                        goBack()
+                    } label: {
+                        Label("Previous...", systemImage: "chevron.left.2")
+                    }.hiddenConditionally(isHidden: randoms.count <= 1)
 
-                Spacer()
+                    Spacer()
 
-                Button {
-                    newRandom()
-                } label: {
-                    Label("Another...", systemImage: "chevron.right.2")
+                    Button {
+                        newRandom()
+                    } label: {
+                        Label("Another...", systemImage: "chevron.right.2")
+                    }
                 }
             }
         }
-
     }
 
     func newRandom() {
