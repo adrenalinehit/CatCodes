@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B1F285228E1CEB6009A5D86 /* ModifierCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */; };
+		9B426CC428F203B600A6536F /* TabbedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B426CC328F203B600A6536F /* TabbedUIView.swift */; };
 		9B486C6728DF760300A2B16C /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B486C6628DF760300A2B16C /* Credits.swift */; };
 		9B486C7028E0F74D00A2B16C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C6F28E0F74D00A2B16C /* Nuke */; };
 		9B486C7228E0F74D00A2B16C /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C7128E0F74D00A2B16C /* NukeExtensions */; };
@@ -132,6 +133,7 @@
 
 /* Begin PBXFileReference section */
 		9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierCollections.swift; sourceTree = "<group>"; };
+		9B426CC328F203B600A6536F /* TabbedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedUIView.swift; sourceTree = "<group>"; };
 		9B486C6628DF760300A2B16C /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		9B9270FC28E7792600B63268 /* ipadcatsRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ipadcatsRelease.entitlements; sourceTree = "<group>"; };
 		9B92710028EB76A500B63268 /* widgetsExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetsExtensionRelease.entitlements; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				D3B623ED284542810084930E /* Views */,
 				D39302D3283FDFD700BBD5F4 /* ipadcatsApp.swift */,
 				D39302D5283FDFD700BBD5F4 /* ContentView.swift */,
+				9B426CC328F203B600A6536F /* TabbedUIView.swift */,
 				D39302D7283FDFDA00BBD5F4 /* Assets.xcassets */,
 				D39302D9283FDFDA00BBD5F4 /* Preview Content */,
 				D39302E7283FF1ED00BBD5F4 /* Launch Screen.storyboard */,
@@ -622,6 +625,7 @@
 				D3B623F42845461D0084930E /* RandomCode.swift in Sources */,
 				9B1F285228E1CEB6009A5D86 /* ModifierCollections.swift in Sources */,
 				D39302D6283FDFD700BBD5F4 /* ContentView.swift in Sources */,
+				9B426CC428F203B600A6536F /* TabbedUIView.swift in Sources */,
 				D39302E4283FE75B00BBD5F4 /* SidebarView.swift in Sources */,
 				D3B623F02845429A0084930E /* Meme.swift in Sources */,
 				D3B623F2284543580084930E /* MyFavourites.swift in Sources */,

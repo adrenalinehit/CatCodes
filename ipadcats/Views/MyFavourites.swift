@@ -12,28 +12,30 @@ struct MyFavourites: View {
     @EnvironmentObject var appPrefs: AppPreferences
 
     var body: some View {
+        VStack {
+            if appPrefs.codeFavourites.isEmpty {
 
-        if appPrefs.codeFavourites.isEmpty {
-            VStack {
                 Text("Oops, you've not chosen any favourites yet...")
                     .multilineTextAlignment(.center)
                     .padding(.all)
-            }.navigationTitle("My Favourites")
-        } else {
-            GeometryReader { geometry in
-                VStack(alignment: .center) {
-                    Spacer()
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(appPrefs.codeFavourites.sorted(by: { return $0.code < $1.code }), id: \.self) { fav in
-                                FavouriteMeme(statusCode: fav.code, animalType: fav.animal).frame(width: geometry.size.width)
+
+            } else {
+                GeometryReader { geometry in
+                    VStack(alignment: .center) {
+                        Spacer()
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(appPrefs.codeFavourites.sorted(by: { return $0.code < $1.code }), id: \.self) { fav in
+                                    FavouriteMeme(statusCode: fav.code, animalType: fav.animal).frame(width: geometry.size.width)
+                                }
                             }
                         }
+                        Spacer()
                     }
-                    Spacer()
-                }.navigationBarTitle("My Favourites")
+                }
             }
-        }
+        }.navigationBarTitle(Text("My Favourites"))
+
     }
 }
 

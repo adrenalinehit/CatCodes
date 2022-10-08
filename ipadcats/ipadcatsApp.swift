@@ -22,6 +22,7 @@ struct IpadcatsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(appPrefs)
+            // TabbedUIView().environmentObject(appPrefs)
         }
     }
 }
