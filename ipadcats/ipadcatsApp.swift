@@ -9,20 +9,24 @@ import SwiftUI
 
 @main
 struct IpadcatsApp: App {
-
+    
     @StateObject var appPrefs = AppPreferences()
-
+    
     init() {
         ImagePipeline {
             $0.dataCache = try? DataCache(name: "uk.co.enyapkcin.ipadcats.datacache")
             $0.dataCachePolicy = .automatic
         }
     }
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(appPrefs)
-            // TabbedUIView().environmentObject(appPrefs)
+            switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+                TabbedUIView().environmentObject(appPrefs)
+            default:
+                ContentView().environmentObject(appPrefs)
+            }
         }
     }
 }

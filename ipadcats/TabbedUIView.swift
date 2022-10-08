@@ -16,22 +16,22 @@ struct TabbedUIView: View {
         TabView {
             MyFavourites()
                 .tabItem {
-                    Label("Favourites", systemImage: "list.dash")
+                    Label("Favourites", systemImage: "star.square.on.square")
                 }
 
             GridView()
                 .tabItem {
-                    Label("Selection", systemImage: "square.and.pencil")
+                    Label("Selection", systemImage: "square.3.layers.3d.down.right")
                 }
 
             AllHttpCodes()
                 .tabItem {
-                    Label("All", systemImage: "square.and.pencil")
+                    Label("All", systemImage: "list.bullet.rectangle")
                 }
 
             RandomCode()
                 .tabItem {
-                    Label("Random", systemImage: "square.and.pencil")
+                    Label("Random", systemImage: "shuffle")
                 }
         }
 

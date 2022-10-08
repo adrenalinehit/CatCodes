@@ -24,8 +24,9 @@ struct RandomCode: View {
             }
             .navigationBarTitle(Text("HTTP \(code.rawValue)"))
             .toolbar {
+                MyToolbar()
+                
                 ToolbarItemGroup(placement: .bottomBar) {
-
                     Button {
                         goBack()
                     } label: {

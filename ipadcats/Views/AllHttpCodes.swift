@@ -36,6 +36,9 @@ struct AllHttpCodes: View {
             .searchable(text: $searchText)
             .navigationBarTitle(Text("All statuses"))
         }
+        .toolbar {
+            MyToolbar()
+        }
     }
 
     var searchResults: [HTTPStatusCode] {

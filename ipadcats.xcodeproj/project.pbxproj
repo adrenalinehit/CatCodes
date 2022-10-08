@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B1F285228E1CEB6009A5D86 /* ModifierCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */; };
 		9B426CC428F203B600A6536F /* TabbedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B426CC328F203B600A6536F /* TabbedUIView.swift */; };
+		9B426CC728F21B6500A6536F /* Toolbars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B426CC628F21B6500A6536F /* Toolbars.swift */; };
 		9B486C6728DF760300A2B16C /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B486C6628DF760300A2B16C /* Credits.swift */; };
 		9B486C7028E0F74D00A2B16C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C6F28E0F74D00A2B16C /* Nuke */; };
 		9B486C7228E0F74D00A2B16C /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C7128E0F74D00A2B16C /* NukeExtensions */; };
@@ -134,6 +135,7 @@
 /* Begin PBXFileReference section */
 		9B1F285128E1CEB6009A5D86 /* ModifierCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierCollections.swift; sourceTree = "<group>"; };
 		9B426CC328F203B600A6536F /* TabbedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedUIView.swift; sourceTree = "<group>"; };
+		9B426CC628F21B6500A6536F /* Toolbars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbars.swift; sourceTree = "<group>"; };
 		9B486C6628DF760300A2B16C /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		9B9270FC28E7792600B63268 /* ipadcatsRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ipadcatsRelease.entitlements; sourceTree = "<group>"; };
 		9B92710028EB76A500B63268 /* widgetsExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetsExtensionRelease.entitlements; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
+		9B426CC528F21B5600A6536F /* Toolbars */ = {
+			isa = PBXGroup;
+			children = (
+				9B426CC628F21B6500A6536F /* Toolbars.swift */,
+			);
+			path = Toolbars;
+			sourceTree = "<group>";
+		};
 		D33A650C2847F1A700A307FA /* ipadcats.data */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +287,7 @@
 				9B9270FC28E7792600B63268 /* ipadcatsRelease.entitlements */,
 				D3F261382846A608006169A8 /* ipadcats.entitlements */,
 				D39302E9283FF2CC00BBD5F4 /* Info.plist */,
+				9B426CC528F21B5600A6536F /* Toolbars */,
 				9B1F285028E1CE8F009A5D86 /* ViewModifiers */,
 				D3B623F72845466D0084930E /* Data */,
 				D3B623EE284542890084930E /* ViewItems */,
@@ -640,6 +651,7 @@
 				D39302D4283FDFD700BBD5F4 /* ipadcatsApp.swift in Sources */,
 				D3BD0A032842A315005A957F /* AppPreferences.swift in Sources */,
 				D3E872392864EEDB001C5C06 /* ShareButton.swift in Sources */,
+				9B426CC728F21B6500A6536F /* Toolbars.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
