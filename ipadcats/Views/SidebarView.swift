@@ -34,11 +34,11 @@ struct SidebarView: View {
 
                 Section {
                     NavigationLink(destination: RandomCode().environmentObject(appPrefs)) {
-                        Label("Pick 1 Random Code", systemImage: "shuffle")
+                        Label("Pick a Random Code", systemImage: "shuffle")
                     }
 
                     NavigationLink(destination: GridView().environmentObject(appPrefs)) {
-                        Label("Show 25 Random Codes", systemImage: "list.bullet.rectangle")
+                        Label("Show many Random Codes", systemImage: "list.bullet.rectangle")
                     }.accessibilityLabel("gridView")
                 } header: {
                     Text("Random Picks")

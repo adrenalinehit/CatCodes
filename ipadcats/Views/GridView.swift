@@ -10,6 +10,7 @@ import SwiftUI
 struct GridView: View {
     
     @EnvironmentObject var appPrefs: AppPreferences
+    @AppStorage("randoms_preference") var randomsToPick = 25
     
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
@@ -34,7 +35,7 @@ struct GridView: View {
             .onAppear {
                 pickRandoms()
             }
-            .navigationBarTitle(Text("25 randoms"))
+            .navigationBarTitle(Text("\(randomsToPick) randoms"))
             .toolbar {
                 MyToolbar()
             }
@@ -43,7 +44,7 @@ struct GridView: View {
     
     func pickRandoms() {
         var uniques = Set<HTTPStatusCode>()
-        while uniques.count < 25 {
+        while uniques.count < randomsToPick {
             uniques.insert(HTTPStatusCode.allCases.randomElement()!)
         }
         randoms = Array(uniques)

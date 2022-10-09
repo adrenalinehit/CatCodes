@@ -14,6 +14,7 @@
 		9B486C7028E0F74D00A2B16C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C6F28E0F74D00A2B16C /* Nuke */; };
 		9B486C7228E0F74D00A2B16C /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C7128E0F74D00A2B16C /* NukeExtensions */; };
 		9B486C7428E0F74D00A2B16C /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B486C7328E0F74D00A2B16C /* NukeUI */; };
+		9B941D4D28F2258800DE632C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9B941D4C28F2258800DE632C /* Settings.bundle */; };
 		9BEA79F228DE2CE8006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
 		9BEA79F328DE2D78006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
 		9BEA79F428DE2D78006826FA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39302E5283FE89500BBD5F4 /* HTTPStatusCode.swift */; };
@@ -139,6 +140,7 @@
 		9B486C6628DF760300A2B16C /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		9B9270FC28E7792600B63268 /* ipadcatsRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ipadcatsRelease.entitlements; sourceTree = "<group>"; };
 		9B92710028EB76A500B63268 /* widgetsExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetsExtensionRelease.entitlements; sourceTree = "<group>"; };
+		9B941D4C28F2258800DE632C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9BEA79F528DE506D006826FA /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		D33A650B2847F1A700A307FA /* ipadcats_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ipadcats_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33A650D2847F1A700A307FA /* ipadcats_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipadcats_data.h; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		D39302C7283FDFD700BBD5F4 = {
 			isa = PBXGroup;
 			children = (
+				9B941D4C28F2258800DE632C /* Settings.bundle */,
 				9B92710028EB76A500B63268 /* widgetsExtensionRelease.entitlements */,
 				D3F261392846A647006169A8 /* widgetsExtension.entitlements */,
 				D39302D2283FDFD700BBD5F4 /* ipadcats */,
@@ -568,6 +571,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B941D4D28F2258800DE632C /* Settings.bundle in Resources */,
 				D39302E8283FF1ED00BBD5F4 /* Launch Screen.storyboard in Resources */,
 				D39302DB283FDFDA00BBD5F4 /* Preview Assets.xcassets in Resources */,
 				D39302D8283FDFDA00BBD5F4 /* Assets.xcassets in Resources */,
@@ -939,7 +943,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -981,7 +985,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1084,7 +1088,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1115,7 +1119,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.enyapkcin.ipadcats.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

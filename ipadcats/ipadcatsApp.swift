@@ -11,6 +11,7 @@ import SwiftUI
 struct IpadcatsApp: App {
     
     @StateObject var appPrefs = AppPreferences()
+    @AppStorage("tabbed_preference") var tabbed = false
     
     init() {
         ImagePipeline {
@@ -20,10 +21,15 @@ struct IpadcatsApp: App {
     }
     
     var body: some Scene {
+        
         WindowGroup {
             switch UIDevice.current.userInterfaceIdiom {
             case .phone:
-                TabbedUIView().environmentObject(appPrefs)
+                if tabbed {
+                    TabbedUIView().environmentObject(appPrefs)
+                } else {
+                    ContentView().environmentObject(appPrefs)
+                }
             default:
                 ContentView().environmentObject(appPrefs)
             }
