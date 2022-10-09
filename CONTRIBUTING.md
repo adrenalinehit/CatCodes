@@ -13,5 +13,5 @@ If in doubt, please get in touch.
 
 ## What you'll need
 - Xcode
-- Unit testing / UI testing preferably, but don't worry!
+- Unit testing / UI testing preferably, but don't worry if you haven't done this... we'll review the code anyway!
 
