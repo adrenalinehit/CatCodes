@@ -8,22 +8,13 @@ So, this is the repo for HTTP Codes - available on the Apple App Store for iPhon
 
 ![preview](preview.png)
 
-## Contributing
-
-Please check out the list of issues if you'd like to contribute. 
-
-Feel free to create issues (especially if you find bugs or have ideas for improvements) and submit PRs for them. They'll require a review before they're included in the main branch & subsequently the app.
-
-Please run swiftlint on your code.
-Please also include Unit Tests or UI Tests or both in your code.
-
-If you want to fork the repo and use it for something similar but different, or just to learn more, please do - it'd be cool to hear about it, but no pressure.
-
-I'd also love to work with a designer to refresh the assets, both in app and in the App Store.
-
 ## CI/CD
 
-Each change to the main branch will result in Xcode Cloud running a testflight build - super helpful!
+Each change to the main branch (on certain files and folders) will result in Xcode Cloud running a testflight build - super helpful!
+
+## Contributing
+
+Awesome! Get involved. [Read the guidelines here!](CONTRIBUTING.md)
 
 ## Acknowledgements
 
