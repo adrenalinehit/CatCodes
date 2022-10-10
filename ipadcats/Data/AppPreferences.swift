@@ -7,6 +7,7 @@
 
 import Foundation
 import ipadcats_data
+import FirebaseAnalytics
 
 class AppPreferences: ObservableObject {
     @Published var animalPreference = AnimalType.cat
@@ -56,10 +57,12 @@ extension AppPreferences {
         if codeFavourites.contains(favouriteItem) {
             codeFavourites.remove(favouriteItem)
             save(favs: codeFavourites)
+            AppLog.removeFavourite(code: String(code), meme: animal.rawValue)
         } else {
             codeFavourites.insert(favouriteItem)
             save(favs: codeFavourites)
             favouriteCount += 1
+            AppLog.addFavourite(code: String(code), meme: animal.rawValue)
         }
 
     }

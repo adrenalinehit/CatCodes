@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct GridView: View {
-    
+
     @EnvironmentObject var appPrefs: AppPreferences
     @AppStorage("randoms_preference") var randomsToPick = 25
-    
+
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
+
     @State private var randoms: [HTTPStatusCode] = []
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -41,7 +41,7 @@ struct GridView: View {
             }
         }
     }
-    
+
     func pickRandoms() {
         var uniques = Set<HTTPStatusCode>()
         while uniques.count < randomsToPick {

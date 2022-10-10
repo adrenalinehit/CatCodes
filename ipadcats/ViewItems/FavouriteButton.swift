@@ -33,9 +33,11 @@ struct FavouriteButton: View {
 
     func favouriteItem() {
         appPrefs.favourite(animal: animalType, code: statusCode)
+        
         let impactMed = UIImpactFeedbackGenerator(style: .heavy)
         impactMed.impactOccurred()
         WidgetCenter.shared.reloadAllTimelines()
+        
         if appPrefs.favouriteCount % 3 == 0 {
             requestReview()
         }

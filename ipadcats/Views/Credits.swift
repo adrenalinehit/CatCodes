@@ -45,7 +45,6 @@ struct Credits: View {
                     Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
                 }
             }
-
         }.navigationBarTitle(Text("Credits"))
     }
 

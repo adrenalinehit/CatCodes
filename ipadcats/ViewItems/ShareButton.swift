@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct ShareButton: View {
 
@@ -19,7 +20,9 @@ struct ShareButton: View {
             ShareLink(
                 item: link,
                 message: Text("I've just laughed at this Http Status code meme! Check it out!")
-            )
+            ).onSubmit {
+                AppLog.share(code: String(statusCode), meme: animalType.rawValue)
+            }
         }
     }
 }
