@@ -15,7 +15,6 @@ struct Meme: View {
     var animalType = AnimalType.cat
 
     var body: some View {
-        AnimalSwitcher(appPrefs: _appPrefs).padding(.all)
         MyImage(animalType: appPrefs.animalPreference, statusCode: statusCode).padding(.all)
 
         HStack {
@@ -25,6 +24,9 @@ struct Meme: View {
         .navigationBarTitle(
             Text("HTTP \(statusCode)")
         )
+        .toolbar {
+            MemeTypeSelectorToolbar()
+        }
     }
 }
 

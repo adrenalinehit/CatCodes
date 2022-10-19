@@ -15,12 +15,6 @@ struct SidebarView: View {
         NavigationStack {
             List {
                 Section {
-                    AnimalSwitcher().environmentObject(appPrefs)
-                } header: {
-                    Text("Meme Type")
-                }
-
-                Section {
                     NavigationLink(destination: AllHttpCodes().environmentObject(appPrefs)) {
                         Label("List all HTTP Status Codes", systemImage: "list.bullet.rectangle")
                     }

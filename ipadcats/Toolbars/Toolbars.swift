@@ -10,12 +10,21 @@ import SwiftUI
 struct MyToolbar: ToolbarContent {
 
     var body: some ToolbarContent {
-        ToolbarItem(placement: .navigationBarTrailing) {
+        ToolbarItem(placement: .navigationBarLeading) {
             NavigationLink(
                 destination: Credits(),
                 label: {
                     Label("Credits", systemImage: "info.bubble")
                 })
+        }
+    }
+}
+
+struct MemeTypeSelectorToolbar: ToolbarContent {
+
+    var body: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            AnimalSwitcher()
         }
     }
 }

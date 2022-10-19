@@ -37,6 +37,7 @@ struct GridView: View {
             }
             .navigationBarTitle(Text("\(randomsToPick) randoms"))
             .toolbar {
+                MemeTypeSelectorToolbar()
                 MyToolbar()
             }
         }
