@@ -32,9 +32,8 @@ jobs:
             -destination 'generic/platform=iOS' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO;
           $(xcrun --find docc) process-archive \
             transform-for-static-hosting /tmp/docbuild/Build/Products/Debug-iphoneos/ipadcats.doccarchive \
-            --hosting-base-path ipadcats \
+            --hosting-base-path CatCodes \
             --output-path docs;
-          echo "<script>window.location.href += \"/CatCodes/documentation/ipadcats\"</script>" > docs/index.html;
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
